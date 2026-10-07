@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Khushi Jeswani: creative, storyteller, translator. Communications and marketing portfolio, Amsterdam.">
+<meta name="author" content="Khushi Jeswani">
+<meta property="og:title" content="Khushi Jeswani | Portfolio">
+<meta property="og:description" content="Communications and marketing work: writing, brand activation and content creation.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="media/explainer-carddeck-poster.jpg">
+<meta name="theme-color" content="#221019">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%235a2748'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-style='italic' fill='%23f3e9d6' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
+<title>Khushi Jeswani | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: one scrolling journal. Hero → contents strip → Part I story (flip cards) → Part II work (tabbed dividers, case studies) → footer.
+   Single deliberate look in the original palette, so every colour is set explicitly. */
+:root {
+  color-scheme: light;
+  --desk: #221019;
+  --paper: #f3e9d6;
+  --paper-2: #ece0c8;
+  --ink: #2f2226;
+  --ink-soft: #766157;
+  --plum: #5a2748;
+  --plum-soft: #834168;
+  --amber: #bd7726;
+  --sage: #6c7145;
+  --line: #c9b48f;
+  --postit: #f1d391;
+  --postit-2: #ecc875;
+
+  --f-serif: "Fraunces", Georgia, serif;
+  --f-hand: "Caveat", "Segoe Script", cursive;
+  --f-display: "Archivo Narrow", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+  --wrap: 1240px;
+  --gutter: clamp(16px, 4vw, 48px);
+  --header-h: 52px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--f-serif); -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+
+.meta { font-family: var(--f-mono); font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--plum); }
+.text-link { display: inline-block; font-family: var(--f-mono); font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 2px solid currentColor; padding-bottom: 3px; }
+.text-link:hover { color: var(--plum); }
+.draft { display: inline-block; margin-left: 6px; padding: 1px 6px; border: 1px dashed var(--amber); font-family: var(--f-mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); vertical-align: 2px; }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+
+/* concept banner */
+.banner { background: var(--amber); color: var(--desk); font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; text-align: center; padding: 8px 16px; }
+
+/* header */
+.site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; height: var(--header-h); background: rgba(34,16,25,.95); color: var(--paper); font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; }
+.site-header .wrap { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.site-header a { color: inherit; text-decoration: none; white-space: nowrap; }
+.status { display: inline-flex; align-items: center; gap: 10px; }
+.status i { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 0 4px rgba(189,119,38,.25); }
+.nav { display: flex; gap: 6px; }
+.nav a { padding: 6px 10px; border-radius: 3px; opacity: .8; }
+.nav a:hover { opacity: 1; background: rgba(243,233,214,.12); }
+.nav a.contact { color: var(--amber); font-weight: 600; opacity: 1; }
+
+/* hero (from v3) */
+.hero { border-bottom: 2px solid var(--ink); padding-block: clamp(36px, 5vw, 72px) clamp(28px, 4vw, 48px); }
+.hero .wrap { display: flex; flex-direction: column; }
+.label { align-self: flex-start; font-family: var(--f-mono); font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--plum); border: 1.5px solid var(--plum); border-radius: 999px; padding: 7px 16px; }
+.name-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 20px clamp(32px, 5vw, 72px); margin-top: 18px; }
+.name { margin: 0; line-height: .84; min-width: 0; }
+.name span { display: block; font-family: var(--f-display); font-weight: 700; font-size: clamp(72px, 12vw, 184px); letter-spacing: -.025em; text-transform: uppercase; }
+.name em { display: block; font-family: var(--f-serif); font-style: italic; font-weight: 600; font-size: clamp(58px, 9.4vw, 148px); letter-spacing: -.02em; color: var(--plum); margin-top: .04em; }
+.keywords { list-style: none; margin: 0; padding: 0 0 .5em 22px; border-left: 5px solid var(--amber); display: grid; gap: 4px; }
+.keywords li { font-family: var(--f-display); font-weight: 700; font-size: clamp(24px, 2.8vw, 42px); line-height: 1; text-transform: uppercase; }
+.keywords li:nth-child(1) { color: var(--plum); } .keywords li:nth-child(2) { color: var(--amber); }
+.links { display: flex; flex-wrap: wrap; gap: 16px 28px; margin-top: 26px; }
+
+/* stat tiles */
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 30px; }
+.stat { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 16px 18px; border: 2px solid var(--ink); background: var(--paper); }
+.stat b { font-family: var(--f-display); font-weight: 700; font-size: clamp(38px, 4vw, 56px); line-height: .9; color: var(--plum); }
+.stat span { font-family: var(--f-mono); font-size: 12px; line-height: 1.45; letter-spacing: .04em; text-transform: uppercase; }
+.stat.ph { border-style: dashed; border-color: var(--plum-soft); background: transparent; }
+.stat.ph b { color: var(--plum-soft); opacity: .55; }
+.stat.ph span { color: var(--ink-soft); }
+.stat.ph::after { content: "placeholder"; position: absolute; top: 8px; right: 10px; font-family: var(--f-mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); }
+
+/* contents strip */
+.contents { background: var(--desk); color: var(--paper); }
+.contents .wrap { display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); gap: 0; align-items: stretch; }
+.contents__label { font-family: var(--f-mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--amber); padding: 26px 32px 26px 0; align-self: center; }
+.contents a { display: flex; align-items: baseline; gap: 16px; padding: 22px 24px; border-left: 1px solid rgba(243,233,214,.18); color: inherit; text-decoration: none; transition: background .2s; }
+.contents a:hover { background: rgba(243,233,214,.07); }
+.contents a b { font-family: var(--f-display); font-size: 40px; line-height: 1; color: var(--amber); }
+.contents a strong { display: block; font-family: var(--f-display); font-size: 26px; text-transform: uppercase; letter-spacing: -.005em; }
+.contents a small { display: block; margin-top: 4px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: rgba(243,233,214,.65); }
+
+/* part headers */
+.part { padding-block: clamp(56px, 7vw, 96px); border-bottom: 2px solid var(--ink); }
+.part--work { background: var(--paper-2); }
+.part__head { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 24px; align-items: end; }
+.part__head h2 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(54px, 8vw, 116px); line-height: .88; letter-spacing: -.02em; text-transform: uppercase; text-wrap: balance; }
+.part__intro { grid-column: 2; margin: 18px 0 0; max-width: 60ch; font-size: 18px; line-height: 1.55; }
+.part__intro .hand { font-family: var(--f-hand); font-size: 28px; font-weight: 700; color: var(--plum); margin-right: 6px; }
+
+/* Part I: flip cards */
+.timeline { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 1fr); gap: 18px; margin-top: clamp(32px, 4vw, 52px); overflow-x: auto; padding: 14px 4px 22px; scroll-snap-type: x mandatory; }
+.flip { appearance: none; border: 0; padding: 0; background: none; font: inherit; color: inherit; text-align: left; cursor: pointer; perspective: 1200px; height: 300px; scroll-snap-align: start; }
+.flip__inner { position: relative; display: block; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform .6s cubic-bezier(.46,.03,.34,1); }
+.flip.is-flipped .flip__inner { transform: rotateY(180deg); }
+.flip__face { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 22px 20px; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.flip__front { background: var(--paper); border: 2px solid var(--ink); }
+.flip:nth-child(even) .flip__front { transform: rotate(0deg); }
+.flip__back { background: linear-gradient(170deg, var(--postit), var(--postit-2)); transform: rotateY(180deg); box-shadow: 4px 8px 18px rgba(60,38,30,.2); }
+.flip__year { font-family: var(--f-mono); font-size: 12px; font-weight: 600; letter-spacing: .12em; color: var(--plum); }
+.flip__title { margin-top: 10px; font-family: var(--f-display); font-weight: 700; font-size: 28px; line-height: 1; text-transform: uppercase; }
+.flip__num { margin-top: auto; font-family: var(--f-display); font-weight: 700; font-size: 52px; line-height: .9; color: var(--plum); }
+.flip__numlabel { margin-top: 6px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+.flip__hint { position: absolute; top: 20px; right: 18px; font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--amber); }
+.flip__back .hand { font-family: var(--f-hand); font-size: 26px; font-weight: 700; color: var(--plum); }
+.flip__back p { margin: 8px 0 0; font-size: 17px; line-height: 1.5; }
+.flip__back .flip__year { margin-top: auto; }
+
+/* Part II: work dividers */
+.tabs { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--header-h)); z-index: 20; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: clamp(32px, 4vw, 52px); padding-top: 10px; background: var(--paper-2); }
+.tab { appearance: none; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; padding: 16px 18px 14px; border: 2px solid var(--ink); border-bottom-width: 6px; background: var(--paper); font: inherit; color: var(--ink); text-align: left; cursor: pointer; border-radius: 10px 10px 0 0; transition: transform .2s, background .2s; }
+.tab:hover { transform: translateY(-3px); }
+.tab small { font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.tab strong { font-family: var(--f-display); font-weight: 700; font-size: clamp(20px, 2.2vw, 30px); line-height: 1; text-transform: uppercase; }
+.tab[aria-selected="true"] { background: var(--plum); color: var(--paper); border-color: var(--plum); border-bottom-color: var(--amber); }
+.tab[aria-selected="true"] small { color: rgba(243,233,214,.75); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 6px; }
+.chip { appearance: none; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; padding: 7px 12px; border-radius: 999px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+/* case study */
+.case { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: center; padding-block: 40px; border-top: 2px solid var(--ink); }
+.case:first-of-type { border-top: 0; }
+.case__meta { font-family: var(--f-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.case__meta b { color: var(--plum); font-weight: 600; }
+.case__title { margin: 8px 0 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(34px, 4vw, 54px); line-height: .95; text-transform: uppercase; letter-spacing: -.01em; text-wrap: balance; }
+.trail { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 0; counter-reset: step; }
+.trail li { position: relative; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; padding: 12px 0 12px 34px; border-bottom: 1px solid var(--line); }
+.trail li::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: 12px; width: 22px; height: 22px; border-radius: 50%; background: var(--ink); color: var(--paper); font-family: var(--f-mono); font-size: 11px; display: grid; place-items: center; }
+.trail li:nth-child(2)::before { background: var(--amber); }
+.trail__k { font-family: var(--f-mono); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--plum); padding-top: 3px; }
+.trail__v { margin: 0; font-size: 17px; line-height: 1.45; }
+.trail li:nth-child(2) .trail__v { font-weight: 600; }
+.case__result { display: flex; align-items: center; gap: 18px; margin-top: 20px; padding: 14px 18px; border: 2px solid var(--ink); background: var(--paper); }
+.case__result b { flex: 0 0 auto; font-family: var(--f-display); font-weight: 700; font-size: 52px; line-height: .9; color: var(--plum); }
+.case__result span { font-family: var(--f-mono); font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
+.case__result.ph { border-style: dashed; border-color: var(--plum-soft); background: transparent; position: relative; }
+.case__result.ph b { color: var(--plum-soft); opacity: .55; }
+.case__result.ph::after { content: "placeholder"; position: absolute; top: 6px; right: 10px; font-family: var(--f-mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); }
+
+/* visuals */
+.visual { justify-self: center; width: 100%; max-width: 300px; }
+.phone { position: relative; width: 260px; max-width: 100%; height: 520px; margin: 0 auto; border: 10px solid var(--desk); border-radius: 38px; background: var(--paper); box-shadow: 10px 14px 0 rgba(34,16,25,.12); overflow: hidden; }
+.phone::before { content: ""; position: absolute; top: 8px; left: 50%; width: 80px; height: 20px; transform: translateX(-50%); border-radius: 12px; background: var(--desk); z-index: 2; }
+.phone__screen { height: 100%; overflow-y: auto; scrollbar-width: none; padding-top: 34px; }
+.phone__screen::-webkit-scrollbar { display: none; }
+.phone__screen img { width: 100%; border-bottom: 1px solid var(--line); }
+.visual__hint { margin-top: 12px; text-align: center; font-family: var(--f-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+
+.mock { padding: 14px; font-size: 12px; line-height: 1.45; }
+.mock__bar { margin: -14px -14px 12px; padding: 12px 14px; background: var(--plum); color: var(--paper); font-family: var(--f-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.mock h4 { margin: 10px 0 6px; font-family: var(--f-display); font-size: 17px; line-height: 1.05; text-transform: uppercase; }
+.mock .tagline { font-family: var(--f-mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--amber); }
+.mock .lines i { display: block; height: 7px; margin: 6px 0; border-radius: 4px; background: var(--line); opacity: .7; }
+.mock .lines i:nth-child(3n) { width: 70%; }
+.mock .box { margin: 12px 0; padding: 10px; border: 1.5px solid var(--ink); background: var(--paper-2); }
+.mock .note { margin-top: 14px; font-family: var(--f-mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--amber); text-align: center; }
+
+.deck { position: relative; height: 360px; }
+.deck span { position: absolute; left: 50%; top: 50%; width: 170px; height: 240px; margin: -120px 0 0 -85px; padding: 18px 16px; border: 2px solid var(--ink); border-radius: 10px; background: var(--paper); font-family: var(--f-display); font-weight: 700; font-size: 22px; line-height: 1; text-transform: uppercase; box-shadow: 4px 6px 14px rgba(60,38,30,.18); }
+.deck span:nth-child(1) { transform: rotate(-12deg) translateX(-48px); background: var(--postit); }
+.deck span:nth-child(2) { transform: rotate(3deg); background: var(--plum); color: var(--paper); border-color: var(--plum); }
+.deck span:nth-child(3) { transform: rotate(14deg) translateX(52px); }
+.deck small { display: block; margin-top: 10px; font-family: var(--f-mono); font-size: 9px; font-weight: 400; letter-spacing: .1em; }
+
+.frame { position: relative; aspect-ratio: 4 / 5; max-width: 100%; border: 2px solid var(--ink); background: var(--paper); overflow: hidden; }
+.frame img { width: 100%; height: 100%; object-fit: cover; }
+.frame--empty { display: grid; place-items: center; border-style: dashed; border-color: var(--plum-soft); background: transparent; font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--plum-soft); text-align: center; padding: 20px; }
+
+.videos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.video { position: relative; display: flex; flex-direction: column; justify-content: flex-end; aspect-ratio: 9 / 14; max-width: 100%; padding: 10px; border: 2px solid var(--ink); background: linear-gradient(160deg, var(--plum), var(--desk)); color: var(--paper); text-decoration: none; overflow: hidden; }
+.video::before { content: ""; position: absolute; top: 50%; left: 50%; width: 40px; height: 40px; margin: -28px 0 0 -20px; border-radius: 50%; background: var(--amber); }
+.video::after { content: ""; position: absolute; top: 50%; left: 50%; margin: -17px 0 0 -4px; border-left: 13px solid var(--desk); border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+.video span { position: relative; font-family: var(--f-display); font-weight: 700; font-size: 15px; line-height: 1; text-transform: uppercase; }
+.video:hover::before { background: var(--paper); }
+
+/* footer */
+.foot { background: var(--desk); color: var(--paper); padding-block: clamp(56px, 8vw, 96px); }
+.foot .wrap { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 32px; }
+.foot h2 { margin: 10px 0 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(48px, 7vw, 104px); line-height: .88; text-transform: uppercase; }
+.foot p { margin: 8px 0 0; font-family: var(--f-mono); font-size: 13px; letter-spacing: .04em; }
+.foot .meta { color: var(--amber); }
+.foot a { color: var(--paper); }
+
+@media (max-width: 900px) {
+  .contents .wrap { grid-template-columns: minmax(0, 1fr); }
+  .contents__label { padding: 18px 0 6px; }
+  .contents a { border-left: 0; border-top: 1px solid rgba(243,233,214,.18); padding: 16px 0; }
+  .part__head { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .part__intro { grid-column: 1; }
+  .case { grid-template-columns: minmax(0, 1fr); }
+  .tabs { gap: 6px; }
+  .tab { padding: 10px 10px 8px; }
+  .tab small { display: none; }
+  .nav a:not(.contact) { display: none; }
+}
+@media (max-width: 560px) {
+  .stats { grid-template-columns: minmax(0, 1fr); }
+  .stat { flex-direction: row; align-items: center; gap: 14px; }
+  .stat b { flex: 0 0 100px; font-size: 38px; }
+  .tab strong { font-size: 15px; }
+  .trail li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .case__result b { font-size: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .flip__inner, .tab { transition: none; }
+}
+
+/* ---- round 4 ---- */
+.work-hint { margin: 18px 0 0; font-family: var(--f-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.tab[aria-expanded="true"] { background: var(--plum); color: var(--paper); border-color: var(--plum); border-bottom-color: var(--amber); }
+.tab[aria-expanded="true"] small { color: rgba(243,233,214,.75); }
+.tab__arrow { margin-left: 8px; font-family: var(--f-mono); font-weight: 400; color: var(--amber); }
+.case { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); padding-block: 28px 8px; border-top: 0; }
+.case__visual { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 22px; min-width: 0; }
+.case__visual > * { min-width: 0; }
+.case__result { margin-top: 22px; }
+.visual-item { display: flex; flex-direction: column; align-items: center; }
+.phone--sm { width: 210px; height: 430px; border-width: 9px; border-radius: 32px; }
+.phone__label { margin-top: 10px; font-family: var(--f-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--plum); text-align: center; }
+.phone--video .phone__screen { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 14px; padding: 40px 18px 24px; background: linear-gradient(165deg, var(--plum), var(--desk)); color: var(--paper); text-align: center; text-decoration: none; }
+a.phone--video { display: block; text-decoration: none; }
+.play { position: relative; width: 58px; height: 58px; border-radius: 50%; background: var(--amber); flex-shrink: 0; }
+.play::after { content: ""; position: absolute; top: 50%; left: 50%; margin: -11px 0 0 -6px; border-left: 18px solid var(--desk); border-top: 11px solid transparent; border-bottom: 11px solid transparent; }
+.phone--video strong { font-family: var(--f-display); font-size: 22px; line-height: 1; text-transform: uppercase; }
+.phone--video small { font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: rgba(243,233,214,.75); }
+a.phone--video:hover .play { background: var(--paper); }
+.videos--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; max-width: 440px; }
+
+/* illustrations of internal materials */
+.illus { width: 100%; max-width: 300px; }
+.illus svg { display: block; width: 100%; height: auto; }
+.kit { position: relative; width: 280px; max-width: 100%; height: 300px; }
+.kit__sheet { position: absolute; width: 200px; height: 150px; padding: 12px; border: 2px solid var(--ink); background: var(--paper); box-shadow: 3px 5px 10px rgba(60,38,30,.15); }
+.kit__sheet b { display: block; font-family: var(--f-mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--plum); }
+.kit__sheet i { display: block; height: 7px; margin-top: 7px; border-radius: 4px; background: var(--line); }
+.kit__sheet i.blk { height: 38px; background: var(--plum-soft); opacity: .5; }
+.kit__sheet:nth-child(1) { left: 0; top: 0; transform: rotate(-6deg); }
+.kit__sheet:nth-child(2) { left: 70px; top: 26px; transform: rotate(4deg); }
+.kit__sheet:nth-child(3) { left: 30px; top: 60px; transform: rotate(-1deg); }
+.kit__folder { position: absolute; left: 6px; right: 6px; bottom: 0; height: 150px; border: 2px solid var(--ink); border-radius: 4px 14px 6px 6px; background: var(--postit-2); display: flex; flex-direction: column; justify-content: flex-end; padding: 16px; }
+.kit__folder::before { content: ""; position: absolute; top: -16px; left: -2px; width: 110px; height: 16px; border: 2px solid var(--ink); border-bottom: 0; border-radius: 6px 6px 0 0; background: var(--postit-2); }
+.kit__folder strong { font-family: var(--f-display); font-size: 26px; line-height: .95; text-transform: uppercase; }
+.kit__folder small { margin-top: 4px; font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--plum); }
+
+.laptop { width: 420px; max-width: 100%; }
+.laptop__screen { position: relative; aspect-ratio: 16 / 10; border: 10px solid var(--desk); border-bottom-width: 14px; border-radius: 12px 12px 0 0; background: var(--paper); overflow: hidden; }
+.laptop__base { height: 14px; margin: 0 -26px; border-radius: 0 0 14px 14px; background: var(--desk); }
+.intra__nav { display: flex; align-items: center; gap: 10px; padding: 8px 10px; background: var(--plum); color: var(--paper); font-family: var(--f-mono); font-size: 8px; letter-spacing: .1em; text-transform: uppercase; }
+.intra__nav b { margin-right: auto; font-size: 9px; }
+.intra__hero { margin: 10px; padding: 12px; background: var(--postit); font-family: var(--f-display); font-size: 16px; text-transform: uppercase; line-height: 1; }
+.intra__tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin: 0 10px; }
+.intra__tiles span { padding: 8px 6px; border: 1.5px solid var(--ink); font-family: var(--f-mono); font-size: 7px; letter-spacing: .08em; text-transform: uppercase; background: var(--paper-2); }
+.laptop__play { position: absolute; inset: 0; display: grid; place-items: center; align-content: center; gap: 8px; background: rgba(34,16,25,.35); color: var(--paper); text-decoration: none; font-family: var(--f-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+
+/* story carousel */
+.carousel { position: relative; margin-top: clamp(28px, 4vw, 44px); }
+.carousel__controls { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 4px; }
+.carousel__btn { appearance: none; width: 44px; height: 44px; border: 2px solid var(--ink); border-radius: 50%; background: var(--paper); color: var(--ink); font-family: var(--f-mono); font-size: 18px; cursor: pointer; }
+.carousel__btn:hover { background: var(--ink); color: var(--paper); }
+.carousel .timeline { margin-top: 0; scrollbar-width: none; }
+.carousel .timeline::-webkit-scrollbar { display: none; }
+@media (max-width: 900px) {
+  .case { grid-template-columns: minmax(0, 1fr); }
+  .laptop__base { margin: 0 -14px; }
+}
+@media (max-width: 560px) {
+  .phone--sm { width: 170px; height: 350px; }
+  .phone--video strong { font-size: 18px; }
+  .case__visual { gap: 14px; }
+  .videos--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ---- round 5 ---- */
+.phone__screen > img, .laptop__scroll > img { display: block; width: 100%; height: auto; border: 0; }
+.phone__screen video { display: block; width: 100%; height: 100%; object-fit: cover; background: var(--desk); }
+.phone--media .phone__screen { padding-top: 0; overflow: hidden; }
+.laptop__scroll { position: absolute; inset: 0; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+.laptop--wide { width: 460px; }
+.case__note { margin: 14px 0 0; max-width: 46ch; font-size: 17px; line-height: 1.55; }
+.case__result--text { display: block; padding: 16px 18px; }
+.case__result--text span { display: block; font-family: var(--f-display); font-weight: 700; font-size: clamp(22px, 2.4vw, 30px); line-height: 1.05; letter-spacing: 0; text-transform: uppercase; color: var(--plum); }
+.case__title--long { font-size: clamp(28px, 3.2vw, 44px); }
+
+/* Part III: recommendations */
+.part--recs { background: var(--paper-2); }
+.recs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 3vw, 40px); margin-top: clamp(32px, 4vw, 52px); }
+.rec { position: relative; display: flex; flex-direction: column; padding: 34px 28px 26px; background: linear-gradient(170deg, var(--postit), var(--postit-2)); box-shadow: 6px 12px 26px rgba(60,38,30,.18); }
+.rec:nth-child(odd) { transform: rotate(-.8deg); }
+.rec:nth-child(even) { transform: rotate(.7deg); }
+.rec::before { content: ""; position: absolute; top: -12px; left: 50%; width: 100px; height: 26px; transform: translateX(-50%) rotate(-3deg); background: rgba(243,233,214,.75); border: 1px solid rgba(201,180,143,.6); }
+.rec blockquote { margin: 0; font-family: var(--f-serif); font-style: italic; font-weight: 600; font-size: clamp(20px, 2vw, 25px); line-height: 1.35; color: var(--ink); }
+.rec blockquote::before { content: "“"; display: block; height: .5em; font-size: 64px; line-height: .8; color: var(--plum); }
+.rec__who { margin-top: 20px; padding-top: 14px; border-top: 1.5px dashed rgba(90,39,72,.35); }
+.rec__who strong { display: block; font-family: var(--f-display); font-size: 22px; text-transform: uppercase; }
+.rec__who span { display: block; margin-top: 2px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+.rec__who em { display: inline-block; margin-top: 8px; padding: 3px 8px; background: var(--plum); color: var(--paper); font-style: normal; font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+.rec details { margin-top: 14px; }
+.rec summary { cursor: pointer; font-family: var(--f-mono); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--plum); }
+.rec details p { margin: 10px 0 0; font-size: 15.5px; line-height: 1.6; }
+
+/* CTA footer */
+.cta { background: var(--desk); color: var(--paper); padding-block: clamp(64px, 9vw, 120px); }
+.cta .meta { color: var(--amber); }
+.cta h2 { margin: 12px 0 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(46px, 7vw, 108px); line-height: .9; text-transform: uppercase; letter-spacing: -.02em; text-wrap: balance; }
+.cta h2 em { font-family: var(--f-serif); font-style: italic; font-weight: 600; text-transform: none; color: var(--amber); letter-spacing: -.01em; }
+.cta__sub { margin: 20px 0 0; font-size: clamp(18px, 1.8vw, 22px); color: rgba(243,233,214,.85); }
+.cta__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 34px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border: 2px solid var(--amber); background: var(--amber); color: var(--desk); font-family: var(--f-mono); font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; cursor: pointer; }
+.btn:hover { background: var(--paper); border-color: var(--paper); }
+.btn--ghost { background: transparent; color: var(--paper); border-color: rgba(243,233,214,.5); }
+.btn--ghost:hover { background: rgba(243,233,214,.1); border-color: var(--paper); color: var(--paper); }
+.cta__email { font-family: var(--f-mono); font-size: 14px; color: var(--paper); user-select: all; }
+.cta__copied { font-family: var(--f-mono); font-size: 12px; color: var(--amber); }
+@media (max-width: 900px) {
+  .recs { grid-template-columns: minmax(0, 1fr); }
+  .laptop--wide { width: 100%; }
+}
+
+/* ---- round 6 ---- */
+:root { --work-bg: #3a1631; --work-bg-2: #2c1026; }
+
+/* hero fills the first screen */
+.hero { min-height: calc(100svh - var(--header-h)); display: flex; flex-direction: column; justify-content: center; padding-block: clamp(28px, 4vw, 56px); }
+.hero .wrap { width: 100%; }
+.name-row { justify-content: space-between; margin-top: 22px; }
+.name span { font-size: clamp(84px, 12.5vw, 230px); }
+@media (min-width: 901px) { .name-row { flex-wrap: nowrap; } .keywords { flex-shrink: 0; } }
+.name em { font-size: clamp(66px, 10vw, 184px); }
+.keywords { padding-bottom: .9em; }
+.keywords li { font-size: clamp(26px, 3vw, 46px); }
+.links { justify-content: space-between; gap: 14px 24px; margin-top: clamp(28px, 4vw, 44px); padding-block: 16px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+.stats { margin-top: 18px; gap: 10px; }
+.stats .stat { flex-direction: row; align-items: center; gap: 14px; padding: 10px 16px; border-width: 1.5px; }
+.stats .stat b { flex: 0 0 auto; font-size: clamp(30px, 2.8vw, 40px); }
+.stats .stat span { font-size: 11px; }
+
+/* the work: deep purple so it reads as its own space */
+.part--work { background: var(--work-bg); color: var(--paper); border-bottom-color: var(--desk); }
+.part--work .meta { color: var(--amber); }
+.part--work .part__head h2 { color: var(--paper); }
+.part--work .part__intro { color: rgba(243,233,214,.85); }
+.part--work .tabs { background: var(--work-bg); }
+.part--work .tab { background: transparent; color: var(--paper); border-color: rgba(243,233,214,.55); border-bottom-color: rgba(243,233,214,.55); }
+.part--work .tab small { color: rgba(243,233,214,.65); }
+.part--work .tab:hover { border-color: var(--paper); }
+.part--work .tab[aria-expanded="true"] { background: var(--paper); color: var(--plum); border-color: var(--paper); border-bottom-color: var(--amber); }
+.part--work .tab[aria-expanded="true"] small { color: var(--ink-soft); }
+.part--work .work-hint { color: rgba(243,233,214,.6); }
+.part--work .chip { border-color: rgba(243,233,214,.6); color: var(--paper); }
+.part--work .chip[aria-pressed="true"] { background: var(--paper); border-color: var(--paper); color: var(--plum); }
+.part--work .case__meta { color: rgba(243,233,214,.65); }
+.part--work .case__meta b { color: var(--amber); }
+.part--work .case__title { color: var(--paper); }
+.part--work .case__note { color: rgba(243,233,214,.88); }
+.part--work .case__result { background: transparent; border-color: rgba(243,233,214,.7); }
+.part--work .case__result b { color: var(--amber); }
+.part--work .case__result span { color: var(--paper); }
+.part--work .case__result--text span { color: var(--amber); }
+.part--work .phone__label { color: var(--amber); }
+.part--work .phone { box-shadow: 10px 14px 0 rgba(0,0,0,.25); border-color: #160810; }
+.part--work .laptop__screen { border-color: #160810; }
+.part--work .laptop__base { background: #160810; }
+.part--work .frame--empty { border-color: rgba(243,233,214,.5); color: rgba(243,233,214,.7); }
+.phone--xs { width: 176px; height: 362px; border-width: 8px; border-radius: 28px; }
+.phone--xs::before { width: 64px; height: 16px; }
+
+/* recommendations: swipeable notes */
+.recs { display: flex; gap: clamp(20px, 3vw, 36px); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 26px 8% 30px; margin-inline: calc(var(--gutter) * -1); grid-template-columns: none; }
+.recs::-webkit-scrollbar { display: none; }
+.rec { flex: 0 0 min(580px, 84%); scroll-snap-align: center; }
+.recs__nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 6px; }
+.dots { display: flex; gap: 8px; }
+.dots button { appearance: none; width: 10px; height: 10px; padding: 0; border: 1.5px solid var(--plum); border-radius: 50%; background: transparent; cursor: pointer; transition: width .2s, background .2s; }
+.dots button[aria-current="true"] { width: 28px; border-radius: 6px; background: var(--plum); }
+.recs__count { font-family: var(--f-mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.recs__arrows { display: flex; gap: 8px; }
+@media (max-width: 900px) {
+  .recs { padding-inline: 6%; }
+  .rec { flex-basis: 88%; }
+  .links { justify-content: flex-start; }
+}
+@media (max-width: 560px) {
+  .phone--xs { width: 150px; height: 310px; }
+  .name-row { gap: 18px; }
+}
+
+/* case study lines */
+.study { margin: 18px 0 0; display: grid; gap: 0; }
+.study > div { display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 16px; padding: 12px 0; border-top: 1px solid rgba(243,233,214,.25); }
+.study > div:last-child { border-bottom: 1px solid rgba(243,233,214,.25); }
+.study dt { padding-top: 3px; font-family: var(--f-mono); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); }
+.study dd { margin: 0; font-size: 17px; line-height: 1.5; color: var(--paper); }
+.case__meta + .study { margin-top: 14px; }
+@media (max-width: 560px) { .study > div { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
+
+/* praise: gold section, cream blurbs */
+:root { --gold: #c99a3c; --gold-deep: #a97d27; }
+.part--recs { background: linear-gradient(180deg, var(--gold), var(--gold-deep)); color: var(--desk); border-bottom-color: var(--desk); }
+.part--recs .meta { color: var(--desk); }
+.part--recs .part__head h2 { color: var(--desk); }
+.part--recs .part__intro { color: var(--desk); }
+.part--recs .rec { background: var(--paper); box-shadow: 8px 14px 0 rgba(34,16,25,.18); }
+.part--recs .rec::before { background: rgba(201,154,60,.55); border-color: rgba(34,16,25,.15); }
+.part--recs .rec blockquote::before { color: var(--gold-deep); }
+.part--recs .rec__who { border-top-color: rgba(169,125,39,.5); }
+.part--recs .rec__who em { background: var(--desk); }
+.part--recs .rec summary { color: var(--plum); }
+.part--recs .dots button { border-color: var(--desk); }
+.part--recs .dots button[aria-current="true"] { background: var(--desk); }
+.part--recs .recs__count { color: var(--desk); }
+.part--recs .carousel__btn { background: transparent; border-color: var(--desk); color: var(--desk); }
+.part--recs .carousel__btn:hover { background: var(--desk); color: var(--gold); }
+
+.stat--link { color: inherit; text-decoration: none; transition: background .2s; }
+.stat--link:hover { background: var(--paper-2); }
+
+/* story: card backs become diary pages */
+.flip { height: 380px; }
+.timeline { grid-auto-columns: minmax(260px, 1fr); }
+.flip__back {
+  background-color: #fbf6ea;
+  background-image:
+    linear-gradient(90deg, transparent 30px, rgba(189,119,38,.45) 30px, rgba(189,119,38,.45) 31.5px, transparent 31.5px),
+    linear-gradient(rgba(90,39,72,.13) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 26px;
+  background-position: 0 0, 0 52px;
+  padding: 18px 18px 16px 44px;
+  border: 1px solid var(--line);
+  box-shadow: 4px 8px 18px rgba(60,38,30,.22);
+}
+.diary__date { align-self: flex-end; font-family: var(--f-hand); font-size: 22px; font-weight: 700; color: var(--amber); line-height: 1; }
+.flip__back .hand { margin-top: 2px; font-size: 26px; line-height: 26px; }
+.flip__back p { margin: 0; font-size: 15.5px; line-height: 26px; color: var(--ink); }
+.diary__sign { margin-top: auto; align-self: flex-end; font-family: var(--f-hand); font-size: 26px; font-weight: 700; color: var(--plum); line-height: 1; }
+@media (max-width: 560px) { .flip { height: 400px; } .timeline { grid-auto-columns: minmax(250px, 82%); } }
+
+.part__head h2 { min-width: 0; overflow-wrap: anywhere; }
+.part--recs .part__head h2 { font-size: clamp(36px, 5.8vw, 92px); }
+@media (max-width: 560px) { .part--recs .part__head h2 { font-size: 9.4vw; } }
+
+button.laptop__play { border: 0; width: 100%; cursor: pointer; font: inherit; font-family: var(--f-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+button.laptop__play:hover .play { background: var(--paper); }
+.laptop__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #160810; }
+
+.phone__screen video.video--whole { object-fit: contain; }
+</style>
+</head>
+<body>
+
+
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="status" href="#top"><i aria-hidden="true"></i>STATUS: [OPEN TO WORK]</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">[WORK]</a>
+      <a href="#story">[STORY]</a>
+      <a href="#recommendations">[RECOMMENDATIONS]</a>
+      <a class="contact" href="#contact">[CONTACT]</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="label">This diary belongs to</span>
+    <div class="name-row">
+      <h1 class="name"><span>Khushi</span><em>Jeswani</em></h1>
+      <ul class="keywords" aria-label="In three words"><li>Creative</li><li>Storyteller</li><li>Translator</li></ul>
+    </div>
+    <div class="links">
+      <a class="text-link" href="#work">See the work ↓</a>
+      <a class="text-link" href="#story">Read the story ↓</a>
+      <a class="text-link" href="#recommendations">What my supervisors say ↓</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>20+</b><span>Campaigns &amp; content pieces shipped</span></div>
+      <div class="stat"><b>16</b><span>My age when I published my first novel</span></div>
+      <a class="stat stat--link" href="#work" title="Medical sociology · Anthropology · Health &amp; society · Regulation · Sustainability · Supply chain · Global control · Sourcing"><b>8+</b><span>Fields made readable, from medical anthropology to supply chain</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="part part--work" id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="part__head">
+      <span class="meta">Part I</span>
+      <h2 id="work-title">The work</h2>
+      <p class="part__intro">Click on a chapter, and pick a format!</p>
+    </div>
+    <div class="tabs" id="tabs"></div>
+    <p class="work-hint" id="work-hint">↑ Open a chapter to see the work</p>
+    <div id="panel" hidden></div>
+  </div>
+</section>
+
+<section class="part" id="story" aria-labelledby="story-title">
+  <div class="wrap">
+    <div class="part__head">
+      <span class="meta">Part II</span>
+      <h2 id="story-title">The story</h2>
+      <p class="part__intro"><span class="hand">Dear diary,</span> tap a card to read the entry.</p>
+    </div>
+    <div class="carousel">
+      <div class="carousel__controls">
+        <button class="carousel__btn" type="button" data-target="timeline" data-dir="-1" aria-label="Previous cards">←</button>
+        <button class="carousel__btn" type="button" data-target="timeline" data-dir="1" aria-label="Next cards">→</button>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </div>
+</section>
+
+<section class="part part--recs" id="recommendations" aria-labelledby="recs-title">
+  <div class="wrap">
+    <div class="part__head">
+      <span class="meta">Part III</span>
+      <h2 id="recs-title">Recommendations</h2>
+      <p class="part__intro">From my managers and senior colleagues at Tradin Organic and Bad Romance.</p>
+    </div>
+    <div class="recs" id="recs"></div>
+    <div class="recs__nav">
+      <div class="dots" id="rec-dots" role="group" aria-label="Choose a recommendation"></div>
+      <span class="recs__count" id="rec-count">1 / 5</span>
+      <div class="recs__arrows">
+        <button class="carousel__btn" type="button" data-target="recs" data-dir="-1" aria-label="Previous recommendation">←</button>
+        <button class="carousel__btn" type="button" data-target="recs" data-dir="1" aria-label="Next recommendation">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact" aria-labelledby="cta-title">
+  <div class="wrap">
+    <span class="meta">Next chapter</span>
+    <h2 id="cta-title">Want to collaborate? <em>Need my energy and proactivity?</em></h2>
+    <p class="cta__sub">Get in touch with me today.</p>
+    <div class="cta__actions">
+      <button class="btn" type="button" id="copy-email">Copy my email</button>
+      <a class="btn btn--ghost" href="https://linkedin.com/in/khushi-jeswani-19b8a3219" target="_blank" rel="noopener noreferrer">Message me on LinkedIn ↗</a>
+      <span class="cta__email">kjeswani1167@gmail.com</span>
+      <span class="cta__copied" id="copied" hidden>Copied</span>
+    </div>
+  </div>
+</section>
+
+<script>
+/* ---- content (this becomes lib/journal-data.ts in the real site) ---- */
+const story = [
+  { year: "2014", title: "Spelling bee champion", num: "5,000+", numLabel: "new words learned",
+    entry: "I had just won the spelling bee, and now I was on a plane to Washington, D.C. I flopped on my second word. But I met so many cool people, and I was proud I'd made it there at all. Words made me feel confident." },
+  { year: "2016", title: "Published author", num: "200", numLabel: "pages, self-published at 16",
+    entry: "A year later, I was writing my first book. A chapter a day, imagining the movie version as I went. My parents always said I'd become a doctor. I was starting to wonder." },
+  { year: "2019", title: "Green Club founder", num: "20+", numLabel: "members recruited",
+    entry: "Why was change so hard to communicate? I took that question to school and founded the first student-run Green Club. Ocean clean-ups, recycling drives, weekly meetings. Then I chose sociology, despite my family's concerns." },
+  { year: "2021", title: "Student board", num: "50+", numLabel: "events coordinated",
+    entry: "Flying to a new country was scary. In Amsterdam I joined the student board and led three committees: a podcast, debates and panels, and a week in Budapest. Communication, people, responsibility. I loved it." },
+  { year: "2023", title: "Treat It Queer", num: "5+", numLabel: "papers & peer reviews",
+    entry: "I took my activist spirit into health justice. Research intern, then core team member, working with brilliant founding doctors. On the side, I waited tables. Good thing I was a social butterfly." },
+  { year: "2024", title: "Fieldwork in India", num: "10+", numLabel: "interviews conducted",
+    entry: "I flew home to India to document change. Long days in small Ayurvedic clinics, sitting on the floor, listening to stories and remedies. I felt so inspired to create. Research felt too rigid. I wanted my medium." },
+  { year: "2026", title: "Tradin Organic", num: "5", numLabel: "departments on one calendar",
+    entry: "Then I found Tradin Organic, my first big-girl job. I picked things up quickly, and whenever I spotted a gap, I filled it. It showed me where I shine. Give me a message and I will run with it." },
+];
+
+const chapters = [
+  { id: "writing", n: "01", label: "Writing", subs: ["Newsletters", "Blog posts", "Marketing copy"] },
+  { id: "brand", n: "02", label: "Brand activation & comms", subs: ["Culture visibility", "Infographics", "Marketing toolkits"] },
+  { id: "content", n: "03", label: "Content creation", subs: ["Social media", "Videography", "UX/UI design"] },
+];
+
+const mockPage = (bar, note) => `<div class="mock"><div class="mock__bar">${bar}</div>
+  <span class="tagline">News · 3 min read</span><h4>Headline of the first article</h4><div class="lines"><i></i><i></i><i></i></div>
+  <div class="box"><span class="tagline">Featured</span><div class="lines"><i></i><i></i></div></div>
+  <span class="tagline">News</span><h4>Second article headline</h4><div class="lines"><i></i><i></i><i></i><i></i></div>
+  <span class="tagline">News</span><h4>Third article headline</h4><div class="lines"><i></i><i></i><i></i></div>
+  <p class="note">${note}</p></div>`;
+
+/* visual kinds: phone (scrolling page), video (phone-shaped video slot), deck, infographic, toolkit, laptop, videos */
+const cases = [
+  { ch: "writing", sub: "Newsletters", org: "Tradin Organic & Empowerment Foundation", format: "News & newsletters", year: "2023–2026",
+    result: { text: "From guest interviews to reports: all kinds of complex material, made simple." },
+    visuals: [
+      { kind: "phone-img", label: "Tradin Organic news · scroll ↕", src: "media/tradin-news.jpg" },
+      { kind: "phone-img", label: "Empowerment Foundation news · scroll ↕", src: "media/ef-news.jpg" } ] },
+  { ch: "writing", sub: "Blog posts", org: "Respect Your Mother", format: "My sustainability blog", year: "2019 – now",
+    title: "Respect Your Mother",
+    result: { v: "150+", l: "views & readers" },
+    visuals: [ { kind: "laptop-img", label: "My blog · scroll ↕", src: "media/blog.jpg" } ] },
+  { ch: "writing", sub: "Marketing copy", org: "Tradin Organic", format: "LinkedIn", year: "2026",
+    study: [
+      ["The audience", "Buyers, partners and industry peers in organic food. B2B readers who want expertise, not hype."],
+      ["My approach", "A professional, thought-leadership tone. I tracked how every piece performed in the analytics and steered the calendar toward what this audience needed most."],
+    ],
+    visuals: [ { kind: "phone-img", label: "Tradin Organic on LinkedIn · scroll ↕", src: "media/tradin-linkedin.jpg" } ] },
+
+  { ch: "brand", sub: "Culture visibility", org: "Tradin Organic", format: "Culture & change", year: "2026",
+    title: "A culture you can hold",
+    study: [
+      ["The audience", "Colleagues across every team, who tune out anything that sounds like a textbook or HR policy."],
+      ["My approach", "A card deck of game-like prompts that makes constructive behaviour fun, placed in every meeting room."],
+    ],
+    visuals: [ { kind: "deck" }, { kind: "phone-mp4", label: "Me, explaining the decision", src: "media/explainer-carddeck.mp4", poster: "media/explainer-carddeck-poster.jpg", controls: true, fit: "contain" } ] },
+  { ch: "brand", sub: "Infographics", org: "Tradin Organic", format: "Business segment", year: "2026",
+    title: "One page for a new business model",
+    study: [
+      ["The audience", "Customers who needed to understand a new business model, fast."],
+      ["My approach", "A digital infographic connected to HubSpot, so it stays current with market insights and feeds lead generation."],
+    ],
+    visuals: [ { kind: "infographic" }, { kind: "phone-mp4", label: "Me, explaining the decision", src: "media/explainer-infographic.mp4", poster: "media/explainer-infographic-poster.jpg", controls: true, fit: "contain" } ] },
+  { ch: "brand", sub: "Marketing toolkits", org: "Tradin Organic", format: "Partner toolkit", year: "2026",
+    title: "A kit clients can actually use",
+    study: [
+      ["The audience", "Clients proud of the partnership, with no easy way to show it."],
+      ["My approach", "A first-ever partner toolkit: product photos, short blurbs and talking points, built as reusable templates."],
+    ],
+    visuals: [ { kind: "toolkit" }, { kind: "phone-mp4", label: "Me, explaining the decision", src: "media/explainer-toolkit.mp4", poster: "media/explainer-toolkit-poster.jpg", controls: true, fit: "contain" } ] },
+
+  { ch: "content", sub: "Social media", org: "Bad Romance & Tradin Organic", format: "Instagram, TikTok & LinkedIn", year: "2026",
+    title: "Shaping brand identity through voice, tone and consistency", long: true,
+    result: { v: "+11%", l: "Bad Romance followers in 3 months" },
+    visuals: [
+      { kind: "phone-mp4", label: "Tradin Organic on Instagram", src: "media/tradin-instagram.mp4", poster: "media/tradin-instagram-poster.jpg", loop: true },
+      { kind: "phone-mp4", label: "Bad Romance on Instagram", src: "media/badromance-instagram.mp4", poster: "media/badromance-instagram-poster.jpg", loop: true } ] },
+  { ch: "content", sub: "Videography", org: "Bad Romance & Tradin Organic", format: "Video direction", year: "2026",
+    title: "Stories people see themselves in",
+    study: [
+      ["My role", "I write the script, direct the shoot and shape the edit."],
+      ["The idea", "For Organic Month at Tradin, I asked colleagues one question on camera."],
+      ["What happened", "It became the video colleagues loved most, because it starred them."],
+    ],
+    visuals: [
+      { kind: "phone-mp4", size: "xs", label: "Tradin · Organic Month", src: "media/tradin-organic-month.mp4", poster: "media/tradin-organic-month-poster.jpg", controls: true },
+      { kind: "phone-mp4", size: "xs", label: "Bad Romance · Reel", src: "media/badromance-reel-1.mp4", poster: "media/badromance-reel-1-poster.jpg", controls: true },
+      { kind: "phone-mp4", size: "xs", label: "Bad Romance · Reel", src: "media/badromance-reel-2.mp4", poster: "media/badromance-reel-2-poster.jpg", controls: true } ] },
+  { ch: "content", sub: "UX/UI design", org: "Tradin Organic", format: "SharePoint intranet", year: "2026",
+    title: "Running the company intranet",
+    study: [
+      ["The audience", "Colleagues who rarely saw what other departments actually do."],
+      ["My approach", "I helped every department build a readable page, then kept it alive with news, video and a Yammer community."],
+    ],
+    visuals: [ { kind: "laptop", video: "media/explainer-intranet.mp4", poster: "media/explainer-intranet-poster.jpg" } ] },
+];
+
+const recs = [
+  { name: "Annet Bos", role: "Marketing & Communications Manager, Tradin Organic", rel: "Managed me directly", date: "July 2026",
+    quote: "She has a natural feel for storytelling and is able to present ideas clearly and confidently.",
+    full: ["I have had the pleasure of working with Khushi in our Marketing & Communications team over the past few months. Even in a relatively short time, she has made a meaningful contribution and quickly established herself as a valued member of the team.",
+      "Khushi is a fast learner who was able to get up to speed quickly and take ownership of her responsibilities. She approaches her work with curiosity, a willingness to learn, and plenty of initiative. She is not afraid to ask questions, comes up with creative ideas, and actively seeks opportunities to contribute beyond her core tasks.",
+      "During her time with us, Khushi supported a range of internal communications and social media activities. She has a natural feel for storytelling and is able to present ideas clearly and confidently. She also works efficiently and builds connections across the organization with ease, making it easy to collaborate with colleagues from different teams."] },
+  { name: "Manya Arora", role: "Founder, Bad Romance", rel: "Managed me directly", date: "September 2026",
+    quote: "What I loved most about working with Khushi was that she never waited to be told what to do.",
+    full: ["Khushi was a genuine asset to the Bad Romance team. She was incredibly proactive and creative, always willing to go the extra mile to create truly excellent content. She brought great energy to the team and consistently impressed me with the quality and thoughtfulness behind everything she produced. It was clear to me from the start that she possessed genuine love for her work!",
+      "As a small business owner, having someone I could fully rely on made an enormous difference! What I loved most about working with Khushi was that she never waited to be told what to do. She consistently brought her own ideas to the table and found ways to elevate projects beyond what I'd originally envisioned.",
+      "I'd happily work with Khushi again, and I recommend her without hesitation to anyone looking for someone creative, hardworking, and genuinely invested in doing great work. I have no doubt she'll continue to excel wherever she goes next!"] },
+  { name: "Dara Colacchio", role: "Marketing Manager, Tradin Organic", rel: "Managed me directly", date: "July 2026",
+    quote: "She approaches new projects with enthusiasm, asks insightful questions, communicates clearly, and quickly turns feedback into action.",
+    full: ["I've had the pleasure of working with Khushi Jeswani for the past several months in her role as Junior Marketing and Communications Coordinator at Tradin Organic. Khushi has been a genuine joy to work with; she is inquisitive, thoughtful, kind, intelligent, and always eager to learn. She approaches new projects with enthusiasm, asks insightful questions, communicates clearly, and quickly turns feedback into action.",
+      "Khushi brings professionalism, curiosity, and a positive attitude to everything she takes on. I have truly enjoyed working with her and would recommend her without hesitation. Any organization would be very fortunate to have Khushi on its team."] },
+  { name: "Susie Hjorth", role: "Executive, Tradin Organic", rel: "Senior colleague", date: "July 2026",
+    quote: "Khushi has shown initiative beyond her immediate scope, quickly built close working relationships across the organization.",
+    full: ["While I haven't worked with Khushi directly on a daily basis, I've noticed her contributions to our global marketing & communications team over the past several months. She has approached her role with a proactive positive attitude, an eagerness to learn, and a collaborative mindset.",
+      "Khushi has shown initiative beyond her immediate scope, quickly built close working relationships across the organization, and she made valuable contributions on both our external and internal communications.",
+      "I wish her all the best for the next step in her career, and am confident she will continue to build on the strong start she has made."] },
+  { name: "Sandra Pesszer", role: "Global Market Strategist, Tradin Organic", rel: "Senior colleague", date: "July 2026",
+    quote: "What stood out most was her openness and ability to think beyond the obvious.",
+    full: ["Khushi is a strong team player who is curious, open to feedback, and always willing to learn. She quickly found her place within Tradin Organic, took ownership of a wide range of tasks, and built strong relationships with different stakeholders across the business.",
+      "What stood out most was her openness and ability to think beyond the obvious. She approaches challenges with creativity, adapts quickly, and is not afraid to share new ideas.",
+      "Khushi would be a great addition to any marketing team looking for an energetic, collaborative, and ambitious junior professional. I'm happy to recommend her as she explores her next opportunity."] },
+];
+
+/* ---- render ---- */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+const timeline = document.getElementById("timeline");
+timeline.innerHTML = story.map(s => `
+  <button class="flip" type="button" aria-label="${esc(s.year)} ${esc(s.title)}: flip for the full story">
+    <span class="flip__inner">
+      <span class="flip__face flip__front">
+        <span class="flip__hint">read entry ↻</span>
+        <span class="flip__year">${esc(s.year)}</span>
+        <span class="flip__title">${esc(s.title)}</span>
+        <span class="flip__num">${esc(s.num)}</span>
+        <span class="flip__numlabel">${esc(s.numLabel)}</span>
+      </span>
+      <span class="flip__face flip__back">
+        <span class="diary__date">${esc(s.year)}</span>
+        <span class="hand">Dear diary,</span>
+        <p>${esc(s.entry)}</p>
+        <span class="diary__sign">K.</span>
+      </span>
+    </span>
+  </button>`).join("");
+timeline.addEventListener("click", e => { const b = e.target.closest(".flip"); if (b) b.classList.toggle("is-flipped"); });
+document.querySelectorAll(".carousel__btn").forEach(btn => btn.addEventListener("click", () => {
+  const track = document.getElementById(btn.dataset.target);
+  const card = track.firstElementChild;
+  const gap = parseFloat(getComputedStyle(track).columnGap) || 18;
+  const step = card ? card.getBoundingClientRect().width + gap : 240;
+  track.scrollBy({ left: step * Number(btn.dataset.dir), behavior: "smooth" });
+}));
+
+const infographicSVG = `<svg viewBox="0 0 300 300" role="img" aria-label="Illustration of a one-page infographic">
+  <rect x="2" y="2" width="296" height="296" fill="#f3e9d6" stroke="#2f2226" stroke-width="3"/>
+  <rect x="2" y="2" width="296" height="44" fill="#5a2748"/>
+  <rect x="18" y="16" width="140" height="8" rx="4" fill="#f3e9d6"/><rect x="18" y="29" width="90" height="6" rx="3" fill="#bd7726"/>
+  <circle cx="58" cy="100" r="28" fill="#f1d391" stroke="#2f2226" stroke-width="2"/>
+  <circle cx="150" cy="100" r="28" fill="#ecc875" stroke="#2f2226" stroke-width="2"/>
+  <circle cx="242" cy="100" r="28" fill="#834168" stroke="#2f2226" stroke-width="2"/>
+  <path d="M88 100 H116 M110 94 L118 100 L110 106" fill="none" stroke="#2f2226" stroke-width="2.5"/>
+  <path d="M180 100 H208 M202 94 L210 100 L202 106" fill="none" stroke="#2f2226" stroke-width="2.5"/>
+  <text x="58" y="146" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#2f2226">SOURCE</text>
+  <text x="150" y="146" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#2f2226">PROCESS</text>
+  <text x="242" y="146" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#2f2226">CLIENT</text>
+  <line x1="18" y1="166" x2="282" y2="166" stroke="#c9b48f" stroke-width="1.5"/>
+  <rect x="30" y="236" width="34" height="40" fill="#5a2748"/><rect x="76" y="214" width="34" height="62" fill="#834168"/>
+  <rect x="122" y="196" width="34" height="80" fill="#bd7726"/><rect x="168" y="222" width="34" height="54" fill="#6c7145"/>
+  <line x1="22" y1="276" x2="210" y2="276" stroke="#2f2226" stroke-width="2"/>
+  <rect x="222" y="190" width="62" height="8" rx="4" fill="#c9b48f"/><rect x="222" y="206" width="50" height="8" rx="4" fill="#c9b48f"/>
+  <rect x="222" y="222" width="58" height="8" rx="4" fill="#c9b48f"/><rect x="222" y="238" width="40" height="8" rx="4" fill="#c9b48f"/>
+</svg>`;
+
+function visualHTML(v) {
+  if (v.kind === "phone-img") return `<div class="visual-item"><div class="phone phone--sm"><div class="phone__screen"><img src="${v.src}" alt="${esc(v.label)}" loading="lazy"></div></div><p class="phone__label">${esc(v.label)}</p></div>`;
+  if (v.kind === "laptop-img") return `<div class="visual-item" style="width:100%"><div class="laptop laptop--wide"><div class="laptop__screen"><div class="laptop__scroll"><img src="${v.src}" alt="${esc(v.label)}" loading="lazy"></div></div><div class="laptop__base"></div></div><p class="phone__label">${esc(v.label)}</p></div>`;
+  if (v.kind === "phone-mp4") return `<div class="visual-item"><div class="phone ${v.size === "xs" ? "phone--xs" : "phone--sm"} phone--media"><div class="phone__screen"><video src="${v.src}" poster="${v.poster}" playsinline preload="metadata" ${v.fit === "contain" ? 'class="video--whole"' : ""} ${v.loop ? "autoplay muted loop" : ""} ${v.controls ? "controls" : ""}></video></div></div><p class="phone__label">${esc(v.label)}</p></div>`;
+  if (v.kind === "phone") return `<div class="visual-item"><div class="phone phone--sm"><div class="phone__screen">${v.html}</div></div><p class="phone__label">${esc(v.label)}</p></div>`;
+  if (v.kind === "video") {
+    const inner = `<div class="phone__screen"><span class="play" aria-hidden="true"></span><strong>${esc(v.title)}</strong><small>${v.url ? "Watch on YouTube ↗" : "30-sec video · to come"}</small></div>`;
+    return `<div class="visual-item">${v.url
+      ? `<a class="phone phone--sm phone--video" href="${v.url}" target="_blank" rel="noopener noreferrer">${inner}</a>`
+      : `<div class="phone phone--sm phone--video">${inner}</div>`}<p class="phone__label">${v.url ? "Video" : "Me, explaining the decision"}</p></div>`;
+  }
+  if (v.kind === "deck") return `<div class="visual-item"><div class="deck" aria-hidden="true" style="width:270px;max-width:100%"><span>Card 01<small>culture card</small></span><span>Card 02<small>culture card</small></span><span>Card 03<small>culture card</small></span></div><p class="phone__label">Illustration · the card deck</p></div>`;
+  if (v.kind === "infographic") return `<div class="visual-item"><div class="illus">${infographicSVG}</div><p class="phone__label">Illustration · internal infographic</p></div>`;
+  if (v.kind === "toolkit") return `<div class="visual-item"><div class="kit" aria-hidden="true">
+      <div class="kit__sheet"><b>Landing page</b><i class="blk"></i><i></i><i></i></div>
+      <div class="kit__sheet"><b>Social assets</b><i class="blk"></i><i></i></div>
+      <div class="kit__sheet"><b>Copy &amp; forms</b><i></i><i></i><i></i><i></i></div>
+      <div class="kit__folder"><strong>Partner<br>toolkit</strong><small>Templates · reusable</small></div>
+    </div><p class="phone__label">Illustration · the toolkit</p></div>`;
+  if (v.kind === "laptop") return `<div class="visual-item"><div class="laptop"><div class="laptop__screen">
+      <div class="intra__nav"><b>Intranet</b><span>News</span><span>People</span><span>Manuals</span></div>
+      <div class="intra__hero">Welcome back</div>
+      <div class="intra__tiles"><span>News</span><span>People spotlight</span><span>Manuals</span><span>Training</span></div>
+      ${v.video
+        ? `<button class="laptop__play" type="button" data-laptop-video="${v.video}" data-poster="${v.poster}"><span class="play" aria-hidden="true"></span>Play: me, explaining the intranet</button>`
+        : `<div class="laptop__play"><span class="play" aria-hidden="true"></span>Walkthrough video · to come</div>`}
+    </div><div class="laptop__base"></div></div><p class="phone__label">Tap the screen to play</p></div>`;
+  if (v.kind === "videos") return `<div class="visual-item" style="width:100%"><div class="videos videos--3">${v.items.map(([t, u]) => `<a class="video" href="${u}" target="_blank" rel="noopener noreferrer"><span>${esc(t)}</span></a>`).join("")}</div><p class="phone__label">Opens on YouTube ↗</p></div>`;
+  return "";
+}
+
+function caseHTML(c) {
+  return `<article class="case">
+    <div class="case__visual">${c.visuals.map(visualHTML).join("")}</div>
+    <div>
+      <div class="case__meta"><b>${esc(c.org)}</b> · ${esc(c.format)} · ${esc(c.year)}</div>
+      ${c.title ? `<h3 class="case__title${c.long ? " case__title--long" : ""}">${esc(c.title)}</h3>` : ""}
+      ${c.note ? `<p class="case__note">${esc(c.note)}</p>` : ""}
+      ${c.study ? `<dl class="study">${c.study.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : ""}
+      ${!c.result ? "" : c.result.text
+        ? `<div class="case__result case__result--text"><span>${esc(c.result.text)}</span></div>`
+        : `<div class="case__result${c.result.ph ? " ph" : ""}"><b>${esc(c.result.v)}</b><span>${esc(c.result.l)}</span></div>`}
+    </div>
+  </article>`;
+}
+
+let active = null, sub = null;
+const tabsEl = document.getElementById("tabs"), panel = document.getElementById("panel"), hint = document.getElementById("work-hint");
+
+function render() {
+  tabsEl.innerHTML = chapters.map(ch => `<button class="tab" type="button" id="tab-${ch.id}" aria-controls="panel" aria-expanded="${ch.id === active}" data-id="${ch.id}">
+      <small>Chapter ${ch.n} · ${ch.subs.length} formats</small><strong>${esc(ch.label)}<span class="tab__arrow" aria-hidden="true">${ch.id === active ? "−" : "+"}</span></strong></button>`).join("");
+  panel.hidden = !active;
+  hint.hidden = !!active;
+  if (!active) { panel.innerHTML = ""; return; }
+  const ch = chapters.find(c => c.id === active);
+  const c = cases.find(x => x.ch === active && x.sub === sub);
+  panel.innerHTML = `<div class="chips" role="group" aria-label="${esc(ch.label)} formats">${ch.subs.map(s =>
+      `<button class="chip" type="button" aria-pressed="${s === sub}" data-sub="${esc(s)}">${esc(s)}</button>`).join("")}</div>`
+    + (c ? caseHTML(c) : "");
+}
+tabsEl.addEventListener("click", e => {
+  const t = e.target.closest(".tab"); if (!t) return;
+  if (active === t.dataset.id) { active = null; sub = null; }
+  else { active = t.dataset.id; sub = chapters.find(c => c.id === active).subs[0]; }
+  render();
+});
+panel.addEventListener("click", e => {
+  const lp = e.target.closest("[data-laptop-video]");
+  if (lp) {
+    const screen = lp.closest(".laptop__screen");
+    screen.innerHTML = `<video class="laptop__video" src="${lp.dataset.laptopVideo}" poster="${lp.dataset.poster}" controls playsinline autoplay></video>`;
+    return;
+  }
+  const c = e.target.closest(".chip"); if (!c) return;
+  sub = c.dataset.sub; render();
+});
+render();
+
+document.getElementById("recs").innerHTML = recs.map(r => `<article class="rec">
+  <blockquote>${esc(r.quote)}</blockquote>
+  <div class="rec__who"><strong>${esc(r.name)}</strong><span>${esc(r.role)} · ${esc(r.date)}</span><em>${esc(r.rel)}</em></div>
+  <details><summary>Read the full recommendation</summary>${r.full.map(p => `<p>${esc(p)}</p>`).join("")}</details>
+</article>`).join("");
+
+const recsEl = document.getElementById("recs"), dotsEl = document.getElementById("rec-dots"), countEl = document.getElementById("rec-count");
+dotsEl.innerHTML = recs.map((r, i) => `<button type="button" aria-label="Recommendation ${i + 1}: ${esc(r.name)}" data-i="${i}"></button>`).join("");
+function currentRec() {
+  const mid = recsEl.getBoundingClientRect().left + recsEl.clientWidth / 2;
+  let best = 0, bestD = Infinity;
+  [...recsEl.children].forEach((el, i) => { const r = el.getBoundingClientRect(); const d = Math.abs(r.left + r.width / 2 - mid); if (d < bestD) { bestD = d; best = i; } });
+  return best;
+}
+function syncDots() {
+  const i = currentRec();
+  [...dotsEl.children].forEach((d, j) => d.setAttribute("aria-current", String(i === j)));
+  countEl.textContent = `${i + 1} / ${recs.length}`;
+}
+dotsEl.addEventListener("click", e => {
+  const d = e.target.closest("button"); if (!d) return;
+  const card = recsEl.children[Number(d.dataset.i)];
+  recsEl.scrollTo({ left: recsEl.scrollLeft + card.getBoundingClientRect().left - recsEl.getBoundingClientRect().left - (recsEl.clientWidth - card.offsetWidth) / 2, behavior: "smooth" });
+});
+let recTick; recsEl.addEventListener("scroll", () => { cancelAnimationFrame(recTick); recTick = requestAnimationFrame(syncDots); });
+syncDots();
+
+const copyBtn = document.getElementById("copy-email"), copied = document.getElementById("copied");
+copyBtn.addEventListener("click", () => {
+  const email = "kjeswani1167@gmail.com";
+  const done = () => { copied.hidden = false; setTimeout(() => { copied.hidden = true; }, 2000); };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(email).then(done).catch(() => selectEmail());
+  } else selectEmail();
+});
+function selectEmail() {
+  const el = document.querySelector(".cta__email"); const r = document.createRange(); r.selectNodeContents(el);
+  const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+}
+</script>
+
+</body>
+</html>
