@@ -58,6 +58,7 @@ a { color: inherit; }
 
 .wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: var(--gutter); }
 .mono { font-family: var(--f-mono); font-size: 12px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; }
+.bridge { display: block; margin: 0 0 6px; }
 .glow, h1, h2, h3, .flip__title, .chapter-btn, .hero__label { text-shadow: none; }
 .link { color: var(--ink); text-decoration: none; border-bottom: 1px solid rgba(227, 168, 87, .7); padding-bottom: 1px; transition: color .2s, border-color .2s; }
 .link:hover { color: var(--amber); border-color: var(--amber); }
@@ -106,6 +107,16 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 .narr .hello { font-family: var(--f-hand); font-size: 32px; line-height: 1; color: var(--amber); }
 .intro__hello { font-family: var(--f-hand); font-size: 36px; line-height: 1; color: var(--amber); }
 .intro p { margin: 10px 0 0; font-size: 21px; line-height: 1.6; color: var(--ink-soft); }
+.intro__punch { font-size: clamp(22px, 2.3vw, 30px) !important; line-height: 1.3 !important; color: var(--ink) !important; }
+.why { margin-top: 14px; }
+.why summary { list-style: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-family: var(--f-hand); font-size: 30px; line-height: 1.1; color: var(--amber); border-bottom: 1px dashed rgba(227,168,87,.6); }
+.why summary::-webkit-details-marker { display: none; }
+.why summary::after { content: "▾"; font-family: var(--f-serif); font-size: 18px; transition: transform .25s; }
+.why[open] summary::after { transform: rotate(180deg); }
+.why summary:hover { color: var(--ink); }
+.why p { animation: whyIn .35s ease; }
+@keyframes whyIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+.case__label { margin: 16px 0 -6px; font-family: var(--f-hand); font-size: 26px; color: var(--amber); }
 .intro p strong { color: var(--ink); font-weight: 700; text-shadow: var(--glow); }
 .ul { text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 2px; text-underline-offset: 5px; color: var(--ink); }
 .circle { position: relative; display: inline-block; white-space: nowrap; margin: 0 .22em; }
@@ -128,6 +139,7 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 /* ---------- work ---------- */
 .chapters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 44px; }
 .chapter-btn { appearance: none; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 4px; padding: 16px 28px; border: 1px solid rgba(244, 235, 218, .4); border-radius: 40px; background: transparent; color: var(--ink); font: inherit; font-size: clamp(20px, 2vw, 26px); font-style: italic; cursor: pointer; text-align: left; transition: background .2s, color .2s, border-color .2s; }
+.chapter-btn__line { font-size: 17px; font-style: italic; color: var(--ink-soft); line-height: 1.3; }
 .chapter-btn small { font-family: var(--f-mono); font-style: normal; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
 .chapter-btn:hover { border-color: var(--ink); }
 .chapter-btn[aria-expanded="true"] { background: var(--paper); color: var(--paper-ink); border-color: var(--paper); }
@@ -145,6 +157,7 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 .case__meta a { color: var(--amber); text-decoration: none; border-bottom: 1px solid rgba(227, 168, 87, .5); }
 .case__meta a:hover { border-color: var(--amber); }
 .case__title { margin: 10px 0 0; font-weight: 500; font-size: clamp(34px, 3.8vw, 52px); line-height: 1; letter-spacing: -.01em; text-wrap: balance; }
+.case__title--long { font-size: clamp(24px, 2.4vw, 32px) !important; line-height: 1.25 !important; font-style: italic; }
 .case__note { margin: 14px 0 0; color: var(--ink-soft); }
 .diary-link { display: inline-block; margin-top: 16px; font-family: var(--f-hand); font-size: 27px; line-height: 1.1; color: var(--amber); text-decoration: none; border-bottom: 1px dashed rgba(227,168,87,.6); }
 .diary-link:hover { color: var(--ink); border-bottom-color: var(--ink); }
@@ -232,6 +245,7 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 .flip.is-flipped .flip__front { pointer-events: none; }
 .flip:not(.is-flipped) .flip__back { pointer-events: none; }
 .flip__year { font-family: var(--f-hand); font-size: 32px; line-height: 1; color: var(--amber); }
+.flip__hook { margin-top: 6px; font-size: 18px; font-style: italic; color: var(--ink-soft); }
 .flip__title { margin-top: 10px; font-size: 30px; font-weight: 500; line-height: 1.02; }
 .flip__photo { position: relative; align-self: center; margin: 14px 0 0; transform: rotate(-3deg); max-width: 100%; transition: transform .35s ease; }
 .flip:nth-child(even) .flip__photo { transform: rotate(2.5deg); }
@@ -277,6 +291,9 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 .cta { padding-block: clamp(90px, 12vw, 160px) 60px; }
 .cta__title { margin: 12px 0 0; max-width: 16ch; font-weight: 500; font-size: clamp(48px, 7.4vw, 104px); line-height: .95; letter-spacing: -.015em; text-wrap: balance; }
 .cta__title em { color: var(--orchid); font-weight: 400; }
+.finale { margin-top: clamp(48px, 6vw, 80px); padding-top: 28px; border-top: 1px solid var(--line); }
+.finale p { margin: 0; font-family: var(--f-hand); font-size: clamp(28px, 3vw, 40px); line-height: 1.15; color: var(--ink); }
+.finale__sign { display: block; margin-top: 10px; text-align: right; font-family: var(--f-hand); font-size: 40px; color: var(--orchid); }
 .cta__sub { margin: 20px 0 0; font-size: 22px; color: var(--ink-soft); }
 .cta__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
 .btn { appearance: none; display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border: 1px solid var(--amber); border-radius: 999px; background: var(--amber); color: #1b0c18; font-family: var(--f-mono); font-size: 13px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; cursor: pointer; }
@@ -302,6 +319,7 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
   .hero__name em { padding-left: .1em; }
   .hero__name span { font-size: 17vw; }
   .hero__name em { font-size: 14.5vw; }
+  .why summary { font-size: 26px; }
   .hero__photo { position: absolute; right: -12px; bottom: calc(100% - 30px); width: 114px; margin: 0; }
   .stat b { font-size: 44px; }
   .phone { width: 180px; height: 380px; }
@@ -350,10 +368,13 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
           <span class="intro__hello">Hi, I'm Khushi.</span>
         </div>
         <div class="intro__body">
-        <p>Every organisation has something important to say: strong values, business models, an identity and a culture that make them unique. In an ideal world, we could differentiate any organisation in an instant. The information is all there. <strong>But not everybody can make it land.</strong></p>
-        <p>I've spent years working out why. First as a sociologist and anthropologist, studying how people make sense of the world. Then in marketing and communications, turning complex material into content people read, watch and share. I read it all: from trends, patterns and emotion-evoking media, to cultural contingencies and group dynamics. I bring the best of both worlds. <span class="ul">An insider with an outsider's perspective.</span> That's what makes me the perfect translator for your company.</p>
+        <p class="intro__punch">Every organisation has something important to say. <strong>Not everybody can make it land, and that's where I come in.</strong></p>
+        <details class="why">
+          <summary>Why I think I'm the solution you need</summary>
+          <p>I've spent years working out why organisations have a hard time being understood. First as a sociologist and anthropologist, studying how people make sense of the world. Then in marketing and communications, turning complex material into content people read, watch and share. I read it all: from trends, patterns and emotion-evoking media, to cultural contingencies and group dynamics. I bring the best of both worlds. <span class="ul">An insider with an outsider's perspective.</span> That's what makes me the perfect translator for your company.</p>
+        </details>
         <div class="arrows">
-          <p><span class="arrow">→</span><a href="#work">Chapter 1: My work.</a> I highlighted impact and user benefits to show you every piece I created and what it changed.</p>
+          <p><span class="arrow">→</span><a href="#work">Chapter 1: My work.</a> Every piece, who it was for, and what it changed.</p>
           <p><span class="arrow">→</span><a href="#story">Chapter 2: My story.</a> How a spelling bee champion ended up here.</p>
         </div>
         </div>
@@ -367,11 +388,10 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
         <h2 class="part__title glow" id="work-title">The work</h2>
         <div class="narr">
           <span class="hello">Dear diary,</span>
-          <p>A question I get a lot: what does a translator actually make? Content that stops the scroll, brand tools people really use, and writing that turns complex into clear. Every day I clock into work and make content with one goal in mind: can somebody who has no idea what my product is understand it within a few seconds of a video? Or a few lines of a blog post?</p>
+          <p>A question I get a lot: what does a translator actually make? First, I get people to stop scrolling. Then I give teams tools they actually use. And underneath all of it, I write.</p>
         </div>
       </div>
       <div class="chapters" id="chapters"></div>
-      <p class="mono work-hint" id="work-hint">↑ Open a chapter to see the work</p>
       <div id="panel" hidden></div>
     </div>
   </section>
@@ -381,9 +401,10 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
   <section class="part" id="story" aria-labelledby="story-title">
     <div class="wrap">
       <div class="part__head">
+        <span class="cue bridge">That's what I make. This is where it comes from.</span>
         <h2 class="part__title glow" id="story-title">Dear diary,</h2>
         <div class="narr">
-          <p>I don't believe work is ever value-free. This portfolio is my diary, where I show what makes me 'me'! Read some of my entries below. Every chapter has been essential in making me the translator and creator that I am today.</p>
+          <p>I don't believe work is ever value-free. This portfolio is my diary, where I show what makes me 'me'! Every chapter below made me the translator and creator I am today.</p>
         </div>
       </div>
       <div class="carousel__bar">
@@ -399,6 +420,7 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
   <section class="part" id="education" aria-labelledby="edu-title">
     <div class="wrap">
       <div class="part__head">
+        <span class="cue bridge">I moved to the Netherlands to study why people believe what they believe.</span>
         <h2 class="part__title part__title--sm glow" id="edu-title">My education</h2>
       </div>
       <div class="edu">
@@ -424,7 +446,8 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
   <section class="part" id="recommendations" aria-labelledby="recs-title">
     <div class="wrap">
       <div class="part__head">
-        <h2 class="part__title part__title--sm glow" id="recs-title">My former managers and their words about me.</h2>
+        <span class="cue bridge">Don't just take my word for it.</span>
+        <h2 class="part__title part__title--sm glow" id="recs-title">What my former managers had to say about me.</h2>
       </div>
       <div class="rec-list" id="recs"></div>
     </div>
@@ -441,6 +464,10 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
         <a class="pill" href="https://wonderfulwonderful1.wixsite.com/respectyourmother" target="_blank" rel="noopener noreferrer">Read my blog ↗</a>
       </div>
       <p class="cta__email"><span id="email-text">kjeswani1167@gmail.com</span><span class="cta__copied" id="copied" hidden>Copied</span></p>
+      <div class="finale">
+        <p>Every organisation has something important to say. Every chapter of my life taught me how to make it land. Let's write the next one together.</p>
+        <span class="finale__sign">K.</span>
+      </div>
     </div>
   </section>
   <footer class="foot mono"><div class="wrap">Khushi Jeswani · Amsterdam · 2026</div></footer>
@@ -460,9 +487,9 @@ const IG_BR = { text: "@shopbadromance", url: "https://www.instagram.com/shopbad
 const LI_TRADIN = { text: "Tradin Organic on LinkedIn", url: "https://www.linkedin.com/company/tradinorganic/" };
 
 const chapters = [
-  { id: "content", label: "Content creation", subs: ["Social media", "Videography", "UX/UI design"] },
-  { id: "brand", label: "Brand activation & comms", subs: ["Marketing toolkits", "Infographics", "Culture visibility"] },
-  { id: "writing", label: "Writing", subs: ["Marketing copy", "Newsletters", "Blog posts", "My book"] },
+  { id: "content", label: "Content creation", line: "First, I get people to stop scrolling.", subs: ["Social media", "Videography", "UX/UI design"] },
+  { id: "brand", label: "Brand activation & comms", line: "Then I give teams tools they actually use.", subs: ["Marketing toolkits", "Infographics", "Culture visibility"] },
+  { id: "writing", label: "Writing", line: "And underneath all of it, I write.", subs: ["Marketing copy", "Newsletters", "Blog posts", "My book"] },
 ];
 
 const explainer = name => ({ kind: "phone-mp4", label: "Me, explaining the decision", src: `media/explainer-${name}.mp4`, poster: `media/explainer-${name}-poster.jpg`, controls: true });
@@ -470,20 +497,21 @@ const explainer = name => ({ kind: "phone-mp4", label: "Me, explaining the decis
 const cases = [
   { ch: "content", sub: "Social media", orgs: [ORG.br, ORG.tradin], format: "Instagram, TikTok & LinkedIn", year: "2026",
     title: "Shaping brand identity through voice, tone and consistency",
+    note: "Two brands, one voice each: I built a tone that made followers feel like insiders.",
     result: { v: "+11%", l: "Bad Romance followers in 3 months" },
     visuals: [
       { kind: "phone-mp4", handle: IG_TRADIN, src: "media/tradin-instagram.mp4", poster: "media/tradin-instagram-poster.jpg", loop: true },
       { kind: "phone-mp4", handle: IG_BR, src: "media/badromance-instagram.mp4", poster: "media/badromance-instagram-poster.jpg", loop: true } ] },
   { ch: "content", sub: "Videography", orgs: [ORG.br, ORG.tradin], format: "Video direction", year: "2026",
     title: "Stories people see themselves in",
+    note: "I write the script, direct the shoot and shape the edit.",
+    studyLabel: "For example:",
     study: [
-      ["My role", "I write the script, direct the shoot and shape the edit."],
       ["The idea", "For Organic Month at Tradin, I asked colleagues one question on camera."],
       ["What happened", "It became the video colleagues loved most, because it starred them."] ],
     visuals: [
       { kind: "phone-mp4", size: "xs", handle: IG_TRADIN, src: "media/tradin-organic-month.mp4", poster: "media/tradin-organic-month-poster.jpg", controls: true },
-      { kind: "phone-mp4", size: "xs", handle: IG_BR, src: "media/badromance-reel-1.mp4", poster: "media/badromance-reel-1-poster.jpg", controls: true },
-      { kind: "phone-mp4", size: "xs", handle: IG_BR, src: "media/badromance-reel-2.mp4", poster: "media/badromance-reel-2-poster.jpg", controls: true } ] },
+      { kind: "phone-mp4", size: "xs", handle: IG_BR, src: "media/badromance-reel-1.mp4", poster: "media/badromance-reel-1-poster.jpg", controls: true } ] },
   { ch: "content", sub: "UX/UI design", orgs: [ORG.tradin], format: "SharePoint intranet", year: "2026",
     title: "Running the company intranet",
     study: [
@@ -511,20 +539,21 @@ const cases = [
     visuals: [ explainer("carddeck") ] },
 
   { ch: "writing", sub: "Marketing copy", orgs: [ORG.tradin], format: "LinkedIn", year: "2026",
+    title: "Thought leadership for people who hate hype",
     study: [
       ["The audience", "Buyers, partners and industry peers in organic food. B2B readers who want expertise, not hype."],
-      ["My approach", "A professional, thought-leadership tone. I tracked how every piece performed in the analytics and steered the calendar toward what this audience needed most."] ],
+      ["My approach", "A professional, thought-leadership tone. I steered the calendar toward what this audience needed most, merging every post with market insights so it read as expertise, not promotion."] ],
     links: [ { text: "See Tradin Organic on LinkedIn ↗", url: LI_TRADIN.url } ],
     visuals: [ { kind: "phone-img", src: "media/tradin-linkedin.jpg", handle: LI_TRADIN, hint: "scroll ↕" } ] },
   { ch: "writing", sub: "Newsletters", orgs: [ORG.tradin, ORG.ef], format: "News & newsletters", year: "2023 – 2026",
+    title: "Turning dense reports into news people open",
     result: { text: "From guest interviews to reports: all kinds of complex material, made simple." },
     visuals: [
       { kind: "phone-img", src: "media/tradin-news.jpg", handle: { text: "Tradin Organic news", url: ORG.tradin.url }, hint: "scroll ↕" },
       { kind: "phone-img", src: "media/ef-news.jpg", handle: { text: "Empowerment Foundation", url: ORG.ef.url }, hint: "scroll ↕" } ] },
   { ch: "writing", sub: "Blog posts", orgs: [ORG.blog], format: "My sustainability blog", year: "2019",
-    title: "Respect Your Mother", diary: "2019",
+    title: "I couldn't understand how a climate crisis was so easy to ignore. So I started writing about it.", diary: "2019",
     result: { v: "150+", l: "views & readers" },
-    links: [ { text: "Read the blog ↗", url: BLOG } ],
     visuals: [ { kind: "laptop-img", src: "media/blog.jpg", handle: { text: "Visit the blog", url: BLOG }, hint: "scroll ↕" } ] },
   { ch: "writing", sub: "My book", orgs: [{ name: "Self-published", url: "" }], format: "Novel", year: "2016",
     title: "Oregon III", diary: "2016",
@@ -639,8 +668,9 @@ function caseHTML(c) {
     <div class="case__visual">${c.visuals.map(visualHTML).join("")}</div>
     <div class="case__text">
       <div class="mono case__meta">${orgs} · ${esc(c.format)} · ${esc(c.year)}</div>
-      ${c.title ? `<h3 class="case__title glow">${esc(c.title)}</h3>` : ""}
+      ${c.title ? `<h3 class="case__title${c.title.length > 60 ? " case__title--long" : ""}">${esc(c.title)}</h3>` : ""}
       ${c.note ? `<p class="case__note">${esc(c.note)}</p>` : ""}
+      ${c.studyLabel ? `<p class="case__label">${esc(c.studyLabel)}</p>` : ""}
       ${c.study ? `<dl class="study">${c.study.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : ""}
       ${result}
       ${c.diary ? (() => { const e = story.find(x => x.year === c.diary); return e ? `<a class="diary-link" href="#entry-${e.year}" data-diary="${e.year}">✎ Read my ${esc(e.year)} diary entry →</a><br>` : ""; })() : ""}
@@ -651,7 +681,7 @@ function caseHTML(c) {
 
 /* ---------- work ---------- */
 let active = null, sub = null;
-const chaptersEl = document.getElementById("chapters"), panel = document.getElementById("panel"), hint = document.getElementById("work-hint");
+const chaptersEl = document.getElementById("chapters"), panel = document.getElementById("panel"), hint = { hidden: true };
 function renderWork() {
   chaptersEl.innerHTML = chapters.map(ch => `<button class="chapter-btn" type="button" id="tab-${ch.id}" aria-controls="panel" aria-expanded="${ch.id === active}" data-id="${ch.id}">
     <span>${esc(ch.label)}</span><small>${ch.subs.length} formats ${ch.id === active ? "−" : "+"}</small></button>`).join("");
