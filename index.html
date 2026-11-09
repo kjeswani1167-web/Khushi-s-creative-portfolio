@@ -370,6 +370,44 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
   html { scroll-behavior: auto; }
   .flip__inner, .book img { transition: none; }
 }
+
+/* ===== Type system: one consistent scale across the page ===== */
+:root { --f-accent: var(--f-serif);
+  --t-title: clamp(42px, 6vw, 80px);   /* section titles */
+  --t-h3: clamp(26px, 2.6vw, 34px);    /* case and card titles */
+  --t-lead: clamp(20px, 1.9vw, 24px);  /* lead lines, quotes */
+  --t-body: 19px;                      /* all running text */
+  --t-small: 17px;                     /* supporting detail */
+  --t-accent: 22px;                    /* gold italic accents */
+  --t-label: 12px;                     /* mono labels */
+}
+/* gold accents: elegant italic serif, same size everywhere */
+.hero__label, .intro__hello, .why summary, .narr .hello, .flip__year, .flip__back .hello, .flip__link, .diary-link, .case__label, .cue, .article-card em
+  { font-family: var(--f-serif) !important; font-style: italic !important; font-weight: 400 !important; font-size: var(--t-accent) !important; line-height: 1.3 !important; transform: none !important; letter-spacing: 0 !important; }
+/* section titles all the same size */
+.part__title, .part__title--sm, .intro__hook, .cta__title { font-size: var(--t-title) !important; line-height: 1 !important; }
+.cta__title { max-width: 20ch; }
+/* titles inside sections */
+.case__title { font-size: var(--t-h3) !important; line-height: 1.15 !important; }
+.flip__title { font-size: 26px !important; line-height: 1.1 !important; }
+.flip__front .flip__num { font-size: 40px !important; }
+.chapter-btn span { font-size: clamp(20px, 1.8vw, 24px) !important; }
+.rec-row__who strong { font-size: 21px !important; }
+.edu__title { font-size: 21px !important; }
+/* lead text */
+.intro__punch, .cta__sub, .rec-row blockquote { font-size: var(--t-lead) !important; line-height: 1.45 !important; }
+/* body text */
+.narr p, .why p, .intro p:not(.intro__punch), .case__note, .seeking p, .edu__langs, .part__intro, .note__text p, .samples__intro { font-size: var(--t-body) !important; line-height: 1.6 !important; }
+/* supporting detail */
+.edu__where, .edu__thesis, .rec-row details p { font-size: var(--t-small) !important; }
+/* mono labels: one size */
+.mono, .hero__role ~ .stats .stat span, .stat span, .chip, .chapter-btn small, .flip__numlabel, .rec-row__who span, .rec-row__who em, .rec-row summary, .vis__label, .result span, .btn, .pill, .foot { font-size: var(--t-label) !important; }
+.hero__role { font-size: 14px !important; }
+.round-btn { font-family: var(--f-serif) !important; font-size: 18px !important; }
+.flip__hint { font-family: var(--f-serif) !important; font-style: italic; font-size: 17px !important; }
+/* closing line: same italic serif, lead size */
+.finale p { font-family: var(--f-serif) !important; font-style: italic; font-size: clamp(24px, 2.6vw, 32px) !important; line-height: 1.3 !important; }
+.finale__sign { font-family: var(--f-serif) !important; font-style: italic; font-size: 28px !important; }
 </style>
 
 </head>
