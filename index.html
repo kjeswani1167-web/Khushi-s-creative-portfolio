@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Khushi Jeswani: creative, storyteller, translator. Communications and marketing portfolio, Amsterdam.">
+<meta name="description" content="Khushi Jeswani: creative, storyteller, translator. Marketing and communications portfolio: brand strategy, corporate and internal communications, digital marketing.">
 <meta name="author" content="Khushi Jeswani">
 <meta property="og:title" content="Khushi Jeswani | Inside My Creative Universe">
-<meta property="og:description" content="The translator you didn't know you needed: content, brand activation and writing that turns complex into clear.">
+<meta property="og:description" content="Content, brand activation and writing that turns complex into clear.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="media/khushi-cutout.webp">
 <meta name="theme-color" content="#110610">
@@ -14,7 +14,7 @@
 <title>Khushi Jeswani | Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&family=Kalam:wght@400&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 <style>
 /* Layout: one continuous narrative over a fixed, slowly drifting plum galaxy.
    Hero → work (three chapters, one format at a time) → story (diary cards) → education & languages → recommendations → contact.
@@ -38,6 +38,7 @@
   --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   --f-hand: "Nanum Pen Script", "Bradley Hand", "Segoe Print", cursive;
   --f-marker: var(--f-hand);
+  --f-accent: "Kalam", "Segoe Print", cursive;
 
   --glow: 0 0 12px rgba(255, 255, 255, .55), 0 0 34px rgba(255, 240, 250, .3);
   --glow-soft: 0 0 9px rgba(255, 255, 255, .32), 0 0 22px rgba(255, 236, 248, .14);
@@ -68,7 +69,7 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 /* ---------- hero ---------- */
 .hero { min-height: 100svh; display: flex; align-items: center; padding-block: 72px 56px; }
 .hero .wrap { width: 100%; }
-.hero__label { font-family: var(--f-hand); font-size: 32px; color: var(--amber); transform: rotate(-2deg); display: inline-block; }
+.hero__label { font-family: var(--f-accent); font-size: 24px; color: var(--amber); transform: rotate(-2deg); display: inline-block; }
 .hero__name { margin: 6px 0 0; font-weight: 500; line-height: .86; letter-spacing: -.02em; text-wrap: balance; }
 .hero__name span { display: block; font-size: clamp(76px, 13vw, 210px); }
 .hero__name em { display: block; font-style: italic; font-weight: 400; font-size: clamp(64px, 11vw, 178px); color: var(--orchid); padding-left: .35em; }
@@ -82,12 +83,13 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 .hero__words li { font-style: italic; font-weight: 500; font-size: clamp(18px, 3.4vw, 50px); line-height: 1.08; }
 .hero__words li:nth-child(2) { color: var(--amber); }
 .hero__words li:nth-child(3) { color: var(--orchid); }
-.hero__links { display: flex; flex-wrap: wrap; gap: 14px 30px; margin-top: 30px; font-size: 18px; }
+.hero__role { margin: 26px 0 0; font-family: var(--f-mono); font-size: clamp(13px, 1.4vw, 18px); letter-spacing: .22em; text-transform: uppercase; color: var(--amber); }
+.hero__links { display: flex; flex-wrap: wrap; gap: 14px 30px; margin-top: 18px; font-size: 18px; }
 .stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 44px; border-top: 1px solid var(--line); }
 .stat { display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; padding: 20px 22px 4px 0; min-width: 0; }
 .stat + .stat { padding-left: 22px; border-left: 1px solid var(--line); }
 .stat b { flex: 0 0 auto; font-weight: 500; font-size: clamp(44px, 4.6vw, 64px); line-height: .9; }
-.stat b.stat__word { font-style: italic; font-size: clamp(30px, 3vw, 46px); white-space: nowrap; }
+.stat b.stat__word { font-style: italic; font-size: clamp(24px, 2.2vw, 34px); white-space: nowrap; }
 .stat span { font-family: var(--f-mono); font-size: 12px; line-height: 1.5; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
 
 /* ---------- parts (no blocks, one flow) ---------- */
@@ -104,25 +106,34 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 .intro__more a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid rgba(227, 168, 87, .5); margin-right: 18px; }
 .narr { max-width: none; margin-top: 14px; }
 .narr p { margin: 8px 0 0; font-size: 20px; line-height: 1.6; color: var(--ink-soft); }
-.narr .hello { font-family: var(--f-hand); font-size: 32px; line-height: 1; color: var(--amber); }
-.intro__hello { font-family: var(--f-hand); font-size: 36px; line-height: 1; color: var(--amber); }
+.narr .hello { font-family: var(--f-accent); font-size: 24px; line-height: 1; color: var(--amber); }
+.intro__hello { font-family: var(--f-accent); font-size: 28px; line-height: 1; color: var(--amber); }
 .intro p { margin: 10px 0 0; font-size: 21px; line-height: 1.6; color: var(--ink-soft); }
+.intro__hook { margin: 6px 0 10px; font-family: var(--f-serif); font-style: italic; font-weight: 500; letter-spacing: -.015em; font-size: clamp(44px, 6vw, 84px); line-height: 1; color: var(--ink); }
+.intro__samples { margin: 26px 0 8px; }
+.intro__samples .samples__intro { margin: 0; }
 .intro__punch { font-size: clamp(22px, 2.3vw, 30px) !important; line-height: 1.3 !important; color: var(--ink) !important; }
 .why { margin-top: 14px; }
-.why summary { list-style: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-family: var(--f-hand); font-size: 30px; line-height: 1.1; color: var(--amber); border-bottom: 1px dashed rgba(227,168,87,.6); }
+.seeking { display: grid; gap: 10px; margin: 22px 0 6px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.seeking p { margin: 0 !important; display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 16px; align-items: baseline; font-size: 19px !important; color: var(--ink) !important; }
+.seeking__link { margin-left: 6px; color: var(--amber); white-space: nowrap; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.seeking__link:hover { color: var(--ink); }
+.seeking .mono { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); }
+@media (max-width: 700px) { .seeking p { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
+.why summary { list-style: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-family: var(--f-accent); font-size: 21px; line-height: 1.3; color: var(--amber); border-bottom: 1px dashed rgba(227,168,87,.6); }
 .why summary::-webkit-details-marker { display: none; }
 .why summary::after { content: "▾"; font-family: var(--f-serif); font-size: 18px; transition: transform .25s; }
 .why[open] summary::after { transform: rotate(180deg); }
 .why summary:hover { color: var(--ink); }
 .why p { animation: whyIn .35s ease; }
 @keyframes whyIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
-.case__label { margin: 16px 0 -6px; font-family: var(--f-hand); font-size: 26px; color: var(--amber); }
+.case__label { margin: 16px 0 -6px; font-family: var(--f-accent); font-size: 19px; color: var(--amber); }
 .intro p strong { color: var(--ink); font-weight: 700; text-shadow: var(--glow); }
 .ul { text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 2px; text-underline-offset: 5px; color: var(--ink); }
 .circle { position: relative; display: inline-block; white-space: nowrap; margin: 0 .22em; }
 .circle svg { position: absolute; left: -10%; top: -26%; width: 120%; height: 152%; overflow: visible; pointer-events: none; }
 .circle path { fill: none; stroke: var(--amber); stroke-width: 2.4; stroke-linecap: round; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 4px rgba(227,168,87,.55)); }
-.cue { margin: 10px 0 0; max-width: none; font-family: var(--f-hand); font-size: 30px; line-height: 1.15; color: var(--amber); }
+.cue { margin: 10px 0 0; max-width: none; font-family: var(--f-accent); font-size: 22px; line-height: 1.15; color: var(--amber); }
 .part__title--sm { font-size: clamp(38px, 4.6vw, 60px); }
 .part { padding-block: clamp(64px, 8vw, 110px) 0; }
 .part__head { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
@@ -158,8 +169,36 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 .case__meta a:hover { border-color: var(--amber); }
 .case__title { margin: 10px 0 0; font-weight: 500; font-size: clamp(34px, 3.8vw, 52px); line-height: 1; letter-spacing: -.01em; text-wrap: balance; }
 .case__title--long { font-size: clamp(24px, 2.4vw, 32px) !important; line-height: 1.25 !important; font-style: italic; }
+.samples { margin-top: 0; }
+.samples .part__title { margin-bottom: 6px; }
+.samples__intro { margin: 10px 0 0; font-size: 20px; line-height: 1.6; color: var(--ink-soft); }
+.samples__bar { margin-top: 18px; }
+.sample-track { display: grid; grid-auto-flow: column; grid-auto-columns: 100%; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 14px 4px 26px; }
+.sample-track::-webkit-scrollbar { display: none; }
+.note { scroll-snap-align: start; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; padding: 34px clamp(22px, 4vw, 52px) 34px clamp(44px, 6vw, 84px); border-radius: 12px; border: 1px solid rgba(255,250,243,.16);
+  background:
+    linear-gradient(90deg, transparent calc(clamp(30px, 4.2vw, 60px) - 1px), rgba(201,149,192,.55) calc(clamp(30px, 4.2vw, 60px) - 1px), rgba(201,149,192,.55) calc(clamp(30px, 4.2vw, 60px) + 1px), transparent calc(clamp(30px, 4.2vw, 60px) + 1px)),
+    repeating-linear-gradient(180deg, transparent 0 33px, rgba(255,250,243,.11) 33px 34px),
+    rgba(30, 12, 28, .82);
+  box-shadow: 0 18px 40px rgba(0,0,0,.4); }
+.note__tag { display: block; line-height: 34px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); }
+.note__text p { margin: 0 0 34px; font-size: 20px; line-height: 34px; color: var(--ink); }
+.note__text p:last-child { margin-bottom: 0; }
+.note__text p.note__result { font-family: var(--f-hand); font-size: 30px; line-height: 34px; color: var(--amber); }
+.note__visual { display: flex; justify-content: center; min-width: 0; }
+@media (max-width: 900px) { .note { grid-template-columns: minmax(0, 1fr); } .note__visual { order: -1; } }
+.sample__img { display: block; max-width: 100%; max-height: 300px; width: auto; transform: rotate(-2deg); filter: drop-shadow(0 10px 18px rgba(0,0,0,.5)); }
+.sample__video { margin: 0; display: grid; gap: 10px; justify-items: center; }
+.sample__video video { display: block; height: 340px; max-width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border: 8px solid #0a0309; border-radius: 26px; background: #0a0309; box-shadow: 0 0 0 1px rgba(244,235,218,.22), 0 20px 40px rgba(0,0,0,.45); }
+.sample__video figcaption { font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); }
+.article-card { display: grid; gap: 10px; max-width: 380px; padding: 22px 24px; border-radius: 10px; background: rgba(255, 250, 243, .06); border: 1px solid rgba(255, 250, 243, .22); color: var(--ink); text-decoration: none; transform: rotate(-1.5deg); box-shadow: 0 14px 30px rgba(0,0,0,.4); transition: transform .3s; }
+.article-card:hover { transform: rotate(0deg); }
+.article-card .mono { font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--amber); }
+.article-card strong { font-size: 25px; font-weight: 500; line-height: 1.15; }
+.article-card span:not(.mono) { font-size: 16.5px; line-height: 1.45; color: var(--ink-soft); }
+.article-card em { font-family: var(--f-accent); font-style: normal; font-size: 18px; color: var(--amber); }
 .case__note { margin: 14px 0 0; color: var(--ink-soft); }
-.diary-link { display: inline-block; margin-top: 16px; font-family: var(--f-hand); font-size: 27px; line-height: 1.1; color: var(--amber); text-decoration: none; border-bottom: 1px dashed rgba(227,168,87,.6); }
+.diary-link { display: inline-block; margin-top: 16px; font-family: var(--f-accent); font-size: 19px; line-height: 1.3; color: var(--amber); text-decoration: none; border-bottom: 1px dashed rgba(227,168,87,.6); }
 .diary-link:hover { color: var(--ink); border-bottom-color: var(--ink); }
 .flip.is-pinged .flip__face { box-shadow: 0 0 0 2px var(--amber), 0 0 28px rgba(227,168,87,.35); transition: box-shadow .3s; }
 .study { margin: 18px 0 0; }
@@ -244,7 +283,7 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 .flip__back { transform: rotateY(180deg); background: rgba(26, 10, 24, .92); border: 1px solid rgba(227, 168, 87, .45); cursor: pointer; }
 .flip.is-flipped .flip__front { pointer-events: none; }
 .flip:not(.is-flipped) .flip__back { pointer-events: none; }
-.flip__year { font-family: var(--f-hand); font-size: 32px; line-height: 1; color: var(--amber); }
+.flip__year { font-family: var(--f-accent); font-size: 24px; line-height: 1; color: var(--amber); }
 .flip__hook { margin-top: 6px; font-size: 18px; font-style: italic; color: var(--ink-soft); }
 .flip__title { margin-top: 10px; font-size: 30px; font-weight: 500; line-height: 1.02; }
 .flip__photo { position: relative; align-self: center; margin: 14px 0 0; transform: rotate(-3deg); max-width: 100%; transition: transform .35s ease; }
@@ -256,11 +295,11 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 .flip__numlabel { margin-top: 8px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
 .flip__open { position: absolute; inset: 0; border: 0; background: transparent; border-radius: 10px; cursor: pointer; }
 .flip__hint { position: absolute; top: 22px; right: 20px; font-family: var(--f-hand); font-size: 24px; color: var(--ink-faint); pointer-events: none; }
-.flip__back .hello { font-family: var(--f-hand); font-size: 28px; line-height: 1; color: var(--amber); }
+.flip__back .hello { font-family: var(--f-accent); font-size: 21px; line-height: 1; color: var(--amber); }
 .flip__back p { margin: 8px 0 0; font-family: var(--f-hand); font-size: 23px; line-height: 1.12; color: var(--ink); overflow-y: auto; scrollbar-width: none; }
 .flip__foot { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 8px; }
 .flip__sign { margin-left: auto; font-family: var(--f-hand); font-size: 28px; color: var(--orchid); }
-.flip__link { font-family: var(--f-hand); font-size: 24px; color: var(--amber); text-underline-offset: 4px; }
+.flip__link { font-family: var(--f-accent); font-size: 17px; color: var(--amber); text-underline-offset: 4px; }
 
 /* ---------- education & languages (compact) ---------- */
 .edu { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 26px; border-top: 1px solid var(--line); }
@@ -319,8 +358,8 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
   .hero__name em { padding-left: .1em; }
   .hero__name span { font-size: 17vw; }
   .hero__name em { font-size: 14.5vw; }
-  .why summary { font-size: 26px; }
-  .hero__photo { position: absolute; right: -12px; bottom: calc(100% - 30px); width: 114px; margin: 0; }
+  .why summary { font-size: 19px; }
+  .hero__photo { position: absolute; right: -2px; bottom: calc(100% - 30px); width: 114px; margin: 0; }
   .stat b { font-size: 44px; }
   .phone { width: 180px; height: 380px; }
   .phone--xs { width: 150px; height: 312px; }
@@ -347,16 +386,17 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
         <figure class="hero__photo"><img src="media/khushi-cutout.webp" width="640" height="661" alt="Khushi Jeswani, smiling and framing her face with her hands"></figure>
         <ul class="hero__words glow" aria-label="In three words"><li>Creative</li><li>Storyteller</li><li>Translator</li></ul>
       </div>
+      <p class="hero__role">Marketing &amp; Communications</p>
       <div class="hero__links">
         <a class="link" href="#work">See the work ↓</a>
-        <a class="link" href="#story">Read the story ↓</a>
         <a class="link" href="#recommendations">Read the recommendations ↓</a>
-        <a class="link" href="https://wonderfulwonderful1.wixsite.com/respectyourmother" target="_blank" rel="noopener noreferrer">Read my blog ↗</a>
+        <a class="link" href="#story">Read the story ↓</a>
+        <a class="link" href="#contact">Contact me ↓</a>
       </div>
       <div class="stats">
-        <div class="stat"><b class="glow">20+</b><span>Campaigns &amp; content pieces shipped</span></div>
+        <div class="stat"><b class="glow">130+</b><span>Social posts designed &amp; published in 2026</span></div>
+        <div class="stat"><b class="glow">+15%</b><span>Engagement boost on content pieces</span></div>
         <div class="stat"><b class="glow">16</b><span>My age when I published my first novel</span></div>
-        <div class="stat"><b class="glow stat__word">Complex → clear</b><span>Regulation, research and supply chain, made readable for every team</span></div>
       </div>
     </div>
   </section>
@@ -368,14 +408,15 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
           <span class="intro__hello">Hi, I'm Khushi.</span>
         </div>
         <div class="intro__body">
-        <p class="intro__punch">Every organisation has something important to say. <strong>Not everybody can make it land, and that's where I come in.</strong></p>
+        <h2 class="intro__hook glow">I'm a translator.</h2>
+        <p class="intro__punch">Every organisation has something important to say. But people are busy, and every culture and language hears a message differently. <strong>I take what's true but hard to love, and make it land with the people it's meant for.</strong></p>
         <details class="why">
           <summary>Why I think I'm the solution you need</summary>
           <p>I've spent years working out why organisations have a hard time being understood. First as a sociologist and anthropologist, studying how people make sense of the world. Then in marketing and communications, turning complex material into content people read, watch and share. I read it all: from trends, patterns and emotion-evoking media, to cultural contingencies and group dynamics. I bring the best of both worlds. <span class="ul">An insider with an outsider's perspective.</span> That's what makes me the perfect translator for your company.</p>
         </details>
-        <div class="arrows">
-          <p><span class="arrow">→</span><a href="#work">Chapter 1: My work.</a> Every piece, who it was for, and what it changed.</p>
-          <p><span class="arrow">→</span><a href="#story">Chapter 2: My story.</a> How a spelling bee champion ended up here.</p>
+        <div class="seeking" id="looking-for">
+          <p><span class="mono">Roles I'm looking for</span><span>Brand strategy · Corporate &amp; internal communications · Digital marketing &amp; storytelling <a class="seeking__link" href="#work">See my work →</a></span></p>
+          <p><span class="mono">Where I'll thrive</span><span>Startups, scale-ups and international companies with a complex story to tell, especially in sustainability, food, health and tech. <a class="seeking__link" href="#story">See my story →</a></span></p>
         </div>
         </div>
       </div>
@@ -393,6 +434,18 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
       </div>
       <div class="chapters" id="chapters"></div>
       <div id="panel" hidden></div>
+
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">✦</div>
+
+  <section class="part" id="recommendations" aria-labelledby="recs-title">
+    <div class="wrap">
+      <div class="part__head">
+        <h2 class="part__title part__title--sm glow" id="recs-title">What my managers say.</h2>
+      </div>
+      <div class="rec-list" id="recs"></div>
     </div>
   </section>
 
@@ -401,7 +454,6 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
   <section class="part" id="story" aria-labelledby="story-title">
     <div class="wrap">
       <div class="part__head">
-        <span class="cue bridge">That's what I make. This is where it comes from.</span>
         <h2 class="part__title glow" id="story-title">Dear diary,</h2>
         <div class="narr">
           <p>I don't believe work is ever value-free. This portfolio is my diary, where I show what makes me 'me'! Every chapter below made me the translator and creator I am today.</p>
@@ -420,7 +472,6 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
   <section class="part" id="education" aria-labelledby="edu-title">
     <div class="wrap">
       <div class="part__head">
-        <span class="cue bridge">I moved to the Netherlands to study why people believe what they believe.</span>
         <h2 class="part__title part__title--sm glow" id="edu-title">My education</h2>
       </div>
       <div class="edu">
@@ -441,23 +492,11 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
     </div>
   </section>
 
-  <div class="divider" aria-hidden="true">✦</div>
-
-  <section class="part" id="recommendations" aria-labelledby="recs-title">
-    <div class="wrap">
-      <div class="part__head">
-        <span class="cue bridge">Don't just take my word for it.</span>
-        <h2 class="part__title part__title--sm glow" id="recs-title">What my former managers had to say about me.</h2>
-      </div>
-      <div class="rec-list" id="recs"></div>
-    </div>
-  </section>
 
   <section class="cta" id="contact" aria-labelledby="cta-title">
     <div class="wrap">
-      <span class="cue" style="display:block;margin:0">What's my next chapter?</span>
       <h2 class="cta__title glow" id="cta-title">Want to collaborate? <em>Need my energy and proactivity?</em></h2>
-      <p class="cta__sub">Get in touch with me today.</p>
+      <p class="cta__sub">Hiring for brand, communications or digital marketing? Get in touch with me today.</p>
       <div class="cta__actions">
         <button class="btn" type="button" id="copy-email">Copy my email</button>
         <a class="pill" href="https://linkedin.com/in/khushi-jeswani-19b8a3219" target="_blank" rel="noopener noreferrer">Message me on LinkedIn ↗</a>
@@ -470,7 +509,7 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
       </div>
     </div>
   </section>
-  <footer class="foot mono"><div class="wrap">Khushi Jeswani · Amsterdam · 2026</div></footer>
+  <footer class="foot mono"><div class="wrap">Khushi Jeswani · Almere, Netherlands · 2026</div></footer>
 </main>
 
 <script>
@@ -601,7 +640,8 @@ const recs = [
 const CIRC_PATHS=["M4,52 C2,20 40,4 100,6 C160,8 198,24 196,50 C194,78 150,96 96,94 C40,92 6,80 8,46 C10,30 30,14 60,10",
 "M10,46 C8,16 60,2 108,6 C164,10 196,30 192,56 C188,84 136,96 88,92 C36,88 2,72 6,42 C8,26 26,12 54,8"];
 let circN=0;
-function circled(t){return esc(t).replace(/\[\[(.+?)\]\]/g,(m,w)=>`<span class="circle">${w}<svg viewBox="0 0 200 100" preserveAspectRatio="none" aria-hidden="true"><path d="${CIRC_PATHS[circN++%2]}"/></svg></span>`);}
+function circled(t){return esc(t).replace(/\[\[(.+?)\]\]/g,'$1');}
+function circledOld(t){return esc(t).replace(/\[\[(.+?)\]\]/g,(m,w)=>`<span class="circle">${w}<svg viewBox="0 0 200 100" preserveAspectRatio="none" aria-hidden="true"><path d="${CIRC_PATHS[circN++%2]}"/></svg></span>`);}
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const ext = (url, text) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${esc(text)}</a>`;
@@ -680,7 +720,7 @@ function caseHTML(c) {
 }
 
 /* ---------- work ---------- */
-let active = null, sub = null;
+let active = "content", sub = "Social media";
 const chaptersEl = document.getElementById("chapters"), panel = document.getElementById("panel"), hint = { hidden: true };
 function renderWork() {
   chaptersEl.innerHTML = chapters.map(ch => `<button class="chapter-btn" type="button" id="tab-${ch.id}" aria-controls="panel" aria-expanded="${ch.id === active}" data-id="${ch.id}">
@@ -745,6 +785,11 @@ document.addEventListener("click", e => {
   timeline.scrollTo({ left: card.offsetLeft - timeline.offsetLeft - 2, behavior: "smooth" });
   setTimeout(() => { card.classList.add("is-flipped", "is-pinged"); setTimeout(() => card.classList.remove("is-pinged"), 2200); }, 900);
 });
+
+const sampleTrack = document.getElementById("sample-track");
+document.querySelectorAll("[data-sdir]").forEach(btn => btn.addEventListener("click", () => {
+  sampleTrack.scrollBy({ left: (sampleTrack.clientWidth + 24) * Number(btn.dataset.sdir), behavior: "smooth" });
+}));
 
 /* ---------- recommendations ---------- */
 document.getElementById("recs").innerHTML = recs.map(r => `<article class="rec-row">
