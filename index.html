@@ -435,6 +435,14 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 .laptop__play { font-size: 15px !important; }
 .case__title--long { font-style: normal !important; font-size: var(--t-h3) !important; }
 .flip__back .hello { font-family: var(--f-hand) !important; font-style: normal !important; font-size: 30px !important; }
+
+/* ===== Final scale: body + captions 20px, sub-body 24px for key lines ===== */
+:root { --t-text: clamp(17px, 1.4vw, 20px); --t-sub: clamp(19px, 1.8vw, 24px); --t-h3: clamp(24px, 2.4vw, 34px); --t-accent: var(--t-sub); }
+.intro .intro__punch, .intro .seeking p, .intro .seeking p span, .intro .seeking .mono, .intro .seeking__link,
+.part__head .narr p, .cta .cta__sub, #recommendations .rec-row blockquote
+  { font-size: var(--t-sub) !important; line-height: 1.45 !important; }
+
+.flip .flip__title, .edu .edu__title, .rec-row .rec-row__who strong, .chapters .chapter-btn span, .hero .hero__role { font-size: var(--t-sub) !important; line-height: 1.25 !important; }
 </style>
 
 </head>
