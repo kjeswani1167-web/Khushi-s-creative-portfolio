@@ -373,7 +373,7 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 
 /* ===== Type system: one consistent scale across the page ===== */
 :root { --f-accent: var(--f-serif);
-  --t-title: clamp(42px, 6vw, 80px);   /* section titles */
+  --t-title: clamp(38px, 4.6vw, 64px);   /* section titles */
   --t-h3: clamp(26px, 2.6vw, 34px);    /* case and card titles */
   --t-lead: clamp(20px, 1.9vw, 24px);  /* lead lines, quotes */
   --t-body: 19px;                      /* all running text */
@@ -408,6 +408,33 @@ a.pill:hover { border-color: var(--ink); background: rgba(244, 235, 218, .06); }
 /* closing line: same italic serif, lead size */
 .finale p { font-family: var(--f-serif) !important; font-style: italic; font-size: clamp(24px, 2.6vw, 32px) !important; line-height: 1.3 !important; }
 .finale__sign { font-family: var(--f-serif) !important; font-style: italic; font-size: 28px !important; }
+
+/* ===== One text size: body and captions match (32px on desktop) ===== */
+:root { --t-text: clamp(19px, 2.2vw, 32px); --t-body: var(--t-text); --t-lead: var(--t-text); --t-small: var(--t-text); --t-label: var(--t-text); --t-accent: var(--t-text); --t-h3: clamp(28px, 3.2vw, 46px); }
+.result span, .case .mono, .case .mono a { font-family: var(--f-serif) !important; text-transform: none !important; letter-spacing: 0 !important; font-size: var(--t-text) !important; }
+.rec-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) !important; }
+@media (max-width: 760px) { .rec-row { grid-template-columns: minmax(0, 1fr) !important; } }
+.intro__punch, .cta__sub, .rec-row blockquote, .narr p, .why p, .intro p:not(.intro__punch), .case__note, .seeking p, .seeking p span, .edu__langs, .edu__where, .edu__thesis, .edu__title, .rec-row details p, .study dd, .study dt, .result, .result span, .result b:not(.result__v), .link, .seeking__link, .part__intro, .flip__title, .chapter-btn span, .rec-row__who strong, .case__label
+  { font-size: var(--t-text) !important; line-height: 1.45 !important; }
+/* captions: same size, set in the serif so they read as one family */
+.mono, .stat span, .hero__role, .flip__numlabel, .rec-row__who span, .rec-row__who em, .rec-row summary, .vis__label, .vis__label a, .edu__when, .foot, .foot .wrap
+  { font-family: var(--f-serif) !important; font-size: var(--t-text) !important; letter-spacing: 0 !important; text-transform: none !important; line-height: 1.35 !important; }
+.hero__role { color: var(--amber); }
+.seeking p { grid-template-columns: minmax(0, 1fr) !important; gap: 2px !important; }
+.seeking .mono { color: var(--amber); font-style: italic; }
+.rec-row__who em { padding: 2px 12px; }
+/* small controls stay compact */
+.chip, .chapter-btn small, .btn, .pill, .cta__email { font-size: 15px !important; }
+.flip__numlabel { font-size: 20px !important; }
+
+.hero .hero__label { font-size: clamp(26px, 3vw, 44px) !important; text-shadow: 0 0 12px rgba(227,168,87,.65), 0 0 32px rgba(227,168,87,.35) !important; }
+
+/* audit fixes: work section */
+.study dt { font-family: var(--f-serif) !important; font-style: italic !important; text-transform: none !important; letter-spacing: 0 !important; color: var(--amber) !important; font-size: var(--t-text) !important; }
+.case .result b:not(.result__v), .case .result b.glow { font-size: var(--t-h3) !important; line-height: 1 !important; }
+.laptop__play { font-size: 15px !important; }
+.case__title--long { font-style: normal !important; font-size: var(--t-h3) !important; }
+.flip__back .hello { font-family: var(--f-hand) !important; font-style: normal !important; font-size: 30px !important; }
 </style>
 
 </head>
