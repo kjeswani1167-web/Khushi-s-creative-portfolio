@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Khushi Jeswani | Resume</title>
+<meta name="description" content="Khushi Jeswani: Marketing & Communications. Brand strategy, corporate and internal communications, digital marketing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #f8f3ea;          /* cream ground */
+  --paper-2: #f1e9dc;
+  --ink: #241022;            /* night plum, as text */
+  --ink-soft: #4d3a4a;
+  --ink-faint: #7a6876;
+  --gold: #9a6418;           /* brand gold, deepened for contrast on cream */
+  --gold-bright: #e3a857;    /* brand gold, for stars and rules */
+  --orchid: #8a4f80;         /* brand orchid, deepened */
+  --line: rgba(36,16,34,.12);
+  --f-serif: "EB Garamond", Georgia, "Times New Roman", serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --gutter: clamp(18px, 4vw, 48px);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--f-serif); font-size: 20px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration-color: var(--gold-bright); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+a:hover { color: var(--gold); }
+::selection { background: rgba(227,168,87,.35); }
+
+/* top bar */
+.top { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px var(--gutter); background: rgba(248,243,234,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.top__name { font-weight: 500; font-size: 18px; text-decoration: none; }
+.top__name em { color: var(--orchid); }
+.top nav { display: flex; gap: 22px; flex-wrap: wrap; font-size: 16px; }
+.top nav a { text-decoration: none; color: var(--ink-soft); }
+.top nav a:hover, .top nav a[aria-current="true"] { color: var(--gold); }
+
+/* layout */
+.layout { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: clamp(24px, 5vw, 72px); max-width: 1160px; margin: 0 auto; padding: 0 var(--gutter); }
+.side { position: sticky; top: 90px; align-self: start; padding-top: 40vh; transform: translateY(-50%); }
+.side ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-size: 15px; }
+.side a { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink-faint); transition: color .2s; }
+.side a::before { content: "✦"; font-size: 10px; color: rgba(36,16,34,.25); transition: color .2s; }
+.side a.is-active { color: var(--ink); font-style: italic; }
+.side a.is-active::before { color: var(--gold-bright); }
+main { min-width: 0; }
+
+section { padding: clamp(64px, 9vw, 120px) 0; border-bottom: 1px solid var(--line); }
+section:last-of-type { border-bottom: 0; }
+.h2 { display: flex; align-items: baseline; gap: 14px; margin: 0 0 clamp(28px, 4vw, 44px); font-weight: 500; font-size: clamp(38px, 4.6vw, 56px); line-height: 1.05; letter-spacing: -.01em; }
+.h2::before { content: "✦"; color: var(--gold-bright); font-size: .7em; transform: translateY(-.05em); }
+.h2 em { color: var(--gold); font-weight: 400; }
+.label { font-family: var(--f-mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); }
+
+/* intro */
+.intro { min-height: calc(100svh - 60px); display: flex; flex-direction: column; justify-content: center; text-align: center; }
+.intro__role { margin: 0 0 22px; color: var(--gold); }
+.intro h1 { margin: 0; font-weight: 500; font-size: clamp(44px, 7vw, 92px); line-height: 1.12; letter-spacing: -.015em; }
+.intro h1 em { color: var(--gold); font-weight: 400; }
+.chip-img { display: inline-block; width: 1.05em; height: .8em; vertical-align: -.02em; margin: 0 .08em; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 12px rgba(36,16,34,.18); }
+.chip-img--cut { object-fit: contain; background: none; box-shadow: none; width: .9em; height: .95em; vertical-align: -.12em; }
+.q { color: var(--gold-bright); }
+.intro__meta { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 32px; margin-top: 40px; font-size: 19px; font-style: italic; }
+.intro__meta a, .intro__meta span { color: var(--ink-soft); }
+
+/* about */
+.lead { margin: 0; font-size: clamp(22px, 2.1vw, 26px); line-height: 1.55; max-width: 36em; }
+.lead + .lead { margin-top: 18px; }
+.lead strong { font-weight: 600; }
+.seek { display: grid; gap: 14px; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); max-width: 44em; }
+.seek div { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 16px; align-items: baseline; }
+.seek .label { color: var(--gold); }
+.honours { margin-top: 26px; color: var(--ink-soft); font-style: italic; }
+
+/* experience */
+.job { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 20px; padding: 0 0 36px; }
+.job + .job { padding-top: 6px; }
+.job__when { display: flex; gap: 8px; align-items: baseline; color: var(--ink-faint); font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; padding-top: 10px; }
+.job__when::before { content: "✦"; color: var(--gold-bright); font-size: 10px; }
+.job h3 { margin: 0; font-weight: 500; font-size: clamp(24px, 2.3vw, 30px); line-height: 1.2; }
+.job__org { margin: 2px 0 0; font-style: italic; color: var(--gold); }
+.job__org a { text-decoration: none; }
+.job p.desc { margin: 10px 0 0; color: var(--ink-soft); max-width: 40em; }
+
+/* selected work */
+.work { display: grid; gap: 0; }
+.piece { display: grid; grid-template-columns: 150px minmax(0, 1fr) 150px; gap: 26px; align-items: center; padding: 26px 0; border-top: 1px solid var(--line); }
+.piece:last-child { border-bottom: 1px solid var(--line); }
+.piece img { width: 150px; height: 110px; object-fit: cover; border-radius: 10px; box-shadow: 0 8px 20px rgba(36,16,34,.15); }
+.piece h3 { margin: 0; font-weight: 500; font-size: 24px; line-height: 1.25; }
+.piece .label { display: block; margin-bottom: 6px; }
+.piece p { margin: 6px 0 0; color: var(--ink-soft); }
+.piece__result { text-align: right; }
+.piece__result b { display: block; font-weight: 500; font-size: 34px; line-height: 1; color: var(--ink); }
+.piece__result span { font-size: 15px; font-style: italic; color: var(--ink-faint); }
+.more { display: inline-block; margin-top: 26px; font-style: italic; color: var(--gold); }
+
+/* skills */
+.skills { display: grid; gap: 30px; }
+.skills p { margin: 6px 0 0; font-size: clamp(21px, 2vw, 25px); line-height: 1.55; }
+.skills p i { color: var(--ink); }
+.skills p span.dot { color: var(--gold-bright); }
+
+/* education */
+.degree { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 20px; padding-bottom: 30px; }
+.degree h3 { margin: 0; font-weight: 500; font-size: clamp(22px, 2.1vw, 27px); line-height: 1.25; }
+.degree .uni { margin: 2px 0 0; font-style: italic; color: var(--gold); }
+.degree .thesis { margin: 6px 0 0; font-size: 17px; color: var(--ink-soft); }
+
+/* languages */
+.langs { display: flex; flex-wrap: wrap; gap: 14px 40px; font-size: clamp(22px, 2.1vw, 26px); }
+.langs span::before { content: "✦"; color: var(--gold-bright); font-size: .5em; margin-right: 10px; vertical-align: .25em; }
+.langs i { font-size: .62em; color: var(--ink-faint); margin-left: 6px; }
+
+/* references */
+.refs { display: grid; gap: 30px; }
+.ref { margin: 0; }
+.ref blockquote { margin: 0; font-style: italic; font-size: clamp(21px, 2vw, 25px); line-height: 1.5; }
+.ref blockquote::before { content: "“"; color: var(--gold-bright); }
+.ref blockquote::after { content: "”"; color: var(--gold-bright); }
+.ref p { margin: 8px 0 0; font-size: 16px; color: var(--ink-faint); }
+.ref p b { font-weight: 500; color: var(--ink); }
+
+/* contact */
+.contact { text-align: center; }
+.contact .h2 { justify-content: center; }
+.contact__links { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px 34px; font-size: clamp(20px, 2vw, 24px); }
+.stars { margin-top: 46px; color: var(--gold-bright); letter-spacing: .6em; }
+footer { padding: 30px var(--gutter) 40px; text-align: center; font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .side { display: none; }
+  .job, .degree { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .job__when { padding-top: 0; }
+  .piece { grid-template-columns: 110px minmax(0, 1fr); }
+  .piece img { width: 110px; height: 90px; }
+  .piece__result { grid-column: 2; text-align: left; display: flex; gap: 10px; align-items: baseline; }
+  .piece__result b { display: inline; font-size: 28px; }
+  .seek div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .top nav { gap: 14px; font-size: 15px; }
+}
+@media (max-width: 520px) { .top nav a.hide-sm { display: none; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="top__name" href="#intro">Khushi <em>Jeswani</em></a>
+  <nav aria-label="Page">
+    <a href="#experience">Resume</a>
+    <a class="hide-sm" href="https://khushijeswani.vercel.app/" target="_blank" rel="noopener noreferrer">Creative portfolio ↗</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="layout">
+  <aside class="side" aria-label="Sections">
+    <ol>
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">Selected work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#references">References</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </aside>
+
+  <main>
+    <section class="intro" id="intro" aria-label="Introduction">
+      <p class="intro__role label">Marketing &amp; Communications</p>
+      <h1><span class="q">“</span>I'm <img class="chip-img chip-img--cut" src="../media/khushi-cutout.webp" alt=""> <em>Khushi</em>,<br>a <img class="chip-img" src="../media/diary-tradin.webp" alt=""> <em>translator</em> who<br>makes <img class="chip-img" src="../media/diary-treatitqueer.webp" alt=""> complex <em>clear</em><span class="q">”</span></h1>
+      <div class="intro__meta">
+        <span>Almere, Netherlands</span>
+        <a href="mailto:kjeswani1167@gmail.com">kjeswani1167@gmail.com</a>
+        <a href="https://www.linkedin.com/in/khushi-jeswani-19b8a3219" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-h">
+      <h2 class="h2" id="about-h">About <em>me</em></h2>
+      <p class="lead">Every organisation has something important to say. But people are busy, and every culture and language hears a message differently. <strong>I take what's true but hard to love, and make it land with the people it's meant for.</strong></p>
+      <p class="lead">I trained as a sociologist and anthropologist, studying how people make sense of the world. Today I work in marketing and communications, turning regulation, research and supply-chain material into content colleagues and customers actually read, watch and share.</p>
+      <div class="seek">
+        <div><span class="label">Roles I'm looking for</span><span>Brand strategy · Corporate &amp; internal communications · Digital marketing &amp; storytelling</span></div>
+        <div><span class="label">Where I'll thrive</span><span>International organisations with a complex story to tell, especially in sustainability, food, health and tech.</span></div>
+      </div>
+      <p class="honours">Published author · National Spelling Bee Champion, Ghana · Queen's Commonwealth Silver Medallist</p>
+    </section>
+
+    <section id="experience" aria-labelledby="exp-h">
+      <h2 class="h2" id="exp-h">Where I've <em>worked</em></h2>
+      <article class="job">
+        <span class="job__when">Mar 2026 – Oct 2026</span>
+        <div>
+          <h3>Junior Marketing &amp; Communications Coordinator</h3>
+          <p class="job__org"><a href="https://www.tradinorganic.com" target="_blank" rel="noopener noreferrer">Tradin Organic</a></p>
+          <p class="desc">Owned internal communications and ran social media, the content calendar and the company intranet for a global leader in organic ingredients. Built the company's first partner toolkit, a HubSpot-connected infographic for a new business model and a culture card deck for every meeting room.</p>
+        </div>
+      </article>
+      <article class="job">
+        <span class="job__when">Jan 2026 – Mar 2026</span>
+        <div>
+          <h3>Content Creation Intern</h3>
+          <p class="job__org"><a href="https://thebadromance.com" target="_blank" rel="noopener noreferrer">Bad Romance</a></p>
+          <p class="desc">Owned content and video production across Instagram and TikTok for an independent fashion brand. Replaced ad hoc posting with audience-led content and grew the following by 11% in three months.</p>
+        </div>
+      </article>
+      <article class="job">
+        <span class="job__when">2023 – 2025</span>
+        <div>
+          <h3>Main Team Member &amp; Research Associate</h3>
+          <p class="job__org"><a href="https://treatitqueer.org" target="_blank" rel="noopener noreferrer">Treat It Queer</a></p>
+          <p class="desc">Coordinated an international, multi-stakeholder research project for a health equity NGO, and gave creative direction to illustrators on a graphic medicine book that retells complex medical information as story.</p>
+        </div>
+      </article>
+      <article class="job">
+        <span class="job__when">2023 – 2024</span>
+        <div>
+          <h3>Marketing &amp; Communication Coordinator</h3>
+          <p class="job__org"><a href="https://empowermentfoundation.work" target="_blank" rel="noopener noreferrer">Empowerment Foundation</a></p>
+          <p class="desc">Translated complex research findings into campaigns, blogs and emails for a non-profit helping expats settle in the Netherlands.</p>
+        </div>
+      </article>
+      <article class="job">
+        <span class="job__when">2021 – 2022</span>
+        <div>
+          <h3>Study Coordinator, Board Member</h3>
+          <p class="job__org">Sociologisch Epicentrum, University of Amsterdam</p>
+          <p class="desc">Organised 50+ events and a six-day international trip for a 200+ member student association, managing logistics, communications and stakeholders end to end.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="work" aria-labelledby="work-h">
+      <h2 class="h2" id="work-h">What I've <em>made</em></h2>
+      <div class="work">
+        <article class="piece">
+          <img src="../media/tradin-organic-month-poster.jpg" alt="Still from the Organic Month video">
+          <div><span class="label">Video · Tradin Organic</span><h3>Organic Month, told by the people behind it</h3><p>One question, asked on camera to colleagues across the company, so "organic" had faces instead of certifications.</p></div>
+          <div class="piece__result"><b>No. 1</b><span>video colleagues loved most</span></div>
+        </article>
+        <article class="piece">
+          <img src="../media/explainer-carddeck-poster.jpg" alt="Khushi explaining the culture card deck">
+          <div><span class="label">Internal comms · Tradin Organic</span><h3>A culture you can hold</h3><p>Company values turned into a deck of game-like prompts, placed in every meeting room.</p></div>
+          <div class="piece__result"><b>Every</b><span>meeting room</span></div>
+        </article>
+        <article class="piece">
+          <img src="../media/tradin-news.jpg" alt="Tradin Organic news page" style="object-position: top">
+          <div><span class="label">Writing · Tradin Organic</span><h3>EU deforestation rules, as a conversation</h3><p>A dense regulation turned into an interview with a sustainability specialist, then shared through LinkedIn. <a href="https://knwl.tradinorganic.com/reflections-on-eudr-in-practice-tradin-organic" target="_blank" rel="noopener noreferrer">Read it ↗</a></p></div>
+          <div class="piece__result"><b>EUDR</b><span>made readable</span></div>
+        </article>
+        <article class="piece">
+          <img src="../media/badromance-instagram-poster.jpg" alt="Bad Romance Instagram profile">
+          <div><span class="label">Social media · Bad Romance</span><h3>A brand voice followers feel part of</h3><p>Audience-led content and reels across Instagram and TikTok for an independent fashion brand.</p></div>
+          <div class="piece__result"><b>+11%</b><span>followers in 3 months</span></div>
+        </article>
+      </div>
+      <a class="more" href="https://khushijeswani.vercel.app/" target="_blank" rel="noopener noreferrer">See all my work, with videos, in my creative portfolio ↗</a>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-h">
+      <h2 class="h2" id="skills-h">What I <em>do</em></h2>
+      <div class="skills">
+        <div><span class="label">Communications</span><p><i>Internal communications</i><span class="dot"> · </span>Copywriting<span class="dot"> · </span><i>Newsletters</i><span class="dot"> · </span>Press releases<span class="dot"> · </span><i>Thought leadership</i><span class="dot"> · </span>Presentations</p></div>
+        <div><span class="label">Content &amp; brand</span><p><i>Brand voice</i><span class="dot"> · </span>Social media strategy<span class="dot"> · </span><i>Content calendars</i><span class="dot"> · </span>Video direction &amp; editing<span class="dot"> · </span><i>Event planning</i></p></div>
+        <div><span class="label">Tools</span><p><i>HubSpot</i><span class="dot"> · </span>SharePoint<span class="dot"> · </span><i>Canva &amp; InDesign</i><span class="dot"> · </span>LinkedIn analytics<span class="dot"> · </span><i>Excel</i><span class="dot"> · </span>AI workflows</p></div>
+      </div>
+    </section>
+
+    <section id="education" aria-labelledby="edu-h">
+      <h2 class="h2" id="edu-h">What I <em>studied</em></h2>
+      <article class="degree">
+        <span class="job__when">2024 – 2025</span>
+        <div><h3>MSc Medical Anthropology &amp; Sociology</h3><p class="uni">University of Amsterdam</p><p class="thesis">Thesis: "A Cure for Everything": Mapping the Geographies of Ayurvedic Healing in Modern Day India</p></div>
+      </article>
+      <article class="degree">
+        <span class="job__when">2020 – 2023</span>
+        <div><h3>BSc Sociology, minor in Communication Science</h3><p class="uni">University of Amsterdam</p><p class="thesis">Thesis: To Speak as the Other: Linguistic Racism in the Dutch Healthcare System as Experienced by Students of Colour</p></div>
+      </article>
+    </section>
+
+    <section id="languages" aria-labelledby="lang-h">
+      <h2 class="h2" id="lang-h">What I <em>speak</em></h2>
+      <div class="langs">
+        <span>English <i>Native level</i></span>
+        <span>Hindi <i>Fluent</i></span>
+        <span>Dutch <i>Working, A2 certified</i></span>
+      </div>
+    </section>
+
+    <section id="references" aria-labelledby="ref-h">
+      <h2 class="h2" id="ref-h">What my managers <em>say</em></h2>
+      <div class="refs">
+        <figure class="ref"><blockquote>She has a natural feel for storytelling and is able to present ideas clearly and confidently.</blockquote><p><b>Annet Bos</b>, Marketing &amp; Communications Manager, Tradin Organic</p></figure>
+        <figure class="ref"><blockquote>What I loved most about working with Khushi was that she never waited to be told what to do.</blockquote><p><b>Manya Arora</b>, Founder, Bad Romance</p></figure>
+        <figure class="ref"><blockquote>She approaches new projects with enthusiasm, asks insightful questions, communicates clearly, and quickly turns feedback into action.</blockquote><p><b>Dara Colacchio</b>, Marketing Manager, Tradin Organic</p></figure>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-h">
+      <h2 class="h2" id="contact-h">Let's <em>talk</em></h2>
+      <div class="contact__links">
+        <a href="mailto:kjeswani1167@gmail.com">kjeswani1167@gmail.com</a>
+        <a href="https://www.linkedin.com/in/khushi-jeswani-19b8a3219" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="https://khushijeswani.vercel.app/" target="_blank" rel="noopener noreferrer">Creative portfolio ↗</a>
+      </div>
+      <div class="stars" aria-hidden="true">✦ ✦ ✦</div>
+    </section>
+  </main>
+</div>
+
+<footer>Khushi Jeswani · Almere, Netherlands · 2026</footer>
+
+<script>
+(() => {
+  const links = [...document.querySelectorAll(".side a")];
+  const map = new Map(links.map(a => [a.getAttribute("href").slice(1), a]));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      links.forEach(a => a.classList.remove("is-active"));
+      const a = map.get(e.target.id); if (a) a.classList.add("is-active");
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  document.querySelectorAll("main section[id]").forEach(s => io.observe(s));
+})();
+</script>
+</body>
+</html>
